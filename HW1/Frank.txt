@@ -1,0 +1,2500 @@
+A=[7 6 8
+4 13 -11
+1 1 3]
+
+A =
+
+     7     6     8
+     4    13   -11
+     1     1     3
+
+A(1,3)
+
+ans =
+
+     8
+
+A(:,3)
+
+ans =
+
+     8
+   -11
+     3
+
+A(2:3,2:3)
+
+ans =
+
+    13   -11
+     1     3
+
+det(A)
+
+ans =
+
+  140.0000
+
+inv(A)
+
+ans =
+
+    0.3571   -0.0714   -1.2143
+   -0.1643    0.0929    0.7786
+   -0.0643   -0.0071    0.4786
+
+help det
+ <strong>det</strong>    Determinant.
+    <strong>det</strong>(X) is the determinant of the square matrix X.
+ 
+    Use COND instead of <strong>det</strong> to test for matrix singularity.
+ 
+    See also <a href="matlab:help cond">cond</a>.
+
+    Overloaded methods:
+       <a href="matlab:help gf/det">gf/det</a>
+       <a href="matlab:help laurmat/det">laurmat/det</a>
+
+    Reference page in Help browser
+       <a href="matlab:doc det">doc det</a>
+
+help inv
+ <strong>inv</strong>    Matrix inverse.
+    <strong>inv</strong>(X) is the inverse of the square matrix X.
+    A warning message is printed if X is badly scaled or
+    nearly singular.
+ 
+    See also <a href="matlab:help slash">slash</a>, <a href="matlab:help pinv">pinv</a>, <a href="matlab:help cond">cond</a>, <a href="matlab:help condest">condest</a>, <a href="matlab:help lsqnonneg">lsqnonneg</a>, <a href="matlab:help lscov">lscov</a>.
+
+    Overloaded methods:
+       <a href="matlab:help gf/inv">gf/inv</a>
+       <a href="matlab:help InputOutputModel/inv">InputOutputModel/inv</a>
+       <a href="matlab:help codistributed/inv">codistributed/inv</a>
+
+    Reference page in Help browser
+       <a href="matlab:doc inv">doc inv</a>
+
+lookfor sin
+<a href="matlab:help BioIndexedFile">BioIndexedFile</a>                 - class allows random read access to text files using an index file.
+<a href="matlab:help ExhaustiveSearcher">ExhaustiveSearcher</a>             - Neighbor search object using exhaustive search.
+<a href="matlab:help KDTreeSearcher">KDTreeSearcher</a>                 - Neighbor search object using a kd-tree.
+<a href="matlab:help tscollection">tscollection</a>                   - Create a tscollection object using time or time series objects.
+<a href="matlab:help burgersode">burgersode</a>                     - Burgers' equation solved using a moving mesh technique.
+<a href="matlab:help ddex1delays">ddex1delays</a>                    - Delays for using with DDEX1DE.
+<a href="matlab:help ddex1hist">ddex1hist</a>                      - A history function for using with DDEX1DE.
+<a href="matlab:help eigshow">eigshow</a>                        - Graphical demonstration of eigenvalues and singular values.
+<a href="matlab:help emdenbvp">emdenbvp</a>                       - Solve BVP with singular term.
+<a href="matlab:help fibodemo">fibodemo</a>                       - Used by SINGLEMATH demo.
+<a href="matlab:help singleMath">singleMath</a>                     - Single Precision Math
+<a href="matlab:help ssinit">ssinit</a>                         - Initialize the Slide Show figure
+<a href="matlab:help sunspots">sunspots</a>                       - Using FFT
+<a href="matlab:help weissinger">weissinger</a>                     - Evaluate the residual of the Weissinger implicit ODE
+<a href="matlab:help xfourier">xfourier</a>                       - Square Wave from Sine Waves
+B=rand(3,3)
+
+B =
+
+    0.8147    0.9134    0.2785
+    0.9058    0.6324    0.5469
+    0.1270    0.0975    0.9575
+
+C=A*B
+
+C =
+
+   12.1537   10.9681   12.8908
+   13.6373   10.8012   -2.3091
+    2.1015    1.8384    3.6979
+
+C=round(C)
+
+C =
+
+    12    11    13
+    14    11    -2
+     2     2     4
+
+C=mod(C,5)
+
+C =
+
+     2     1     3
+     4     1     3
+     2     2     4
+
+eig(C)
+
+ans =
+
+   7.3464          
+  -0.1732 + 0.7173i
+  -0.1732 - 0.7173i
+
+x='howmanychuckscanawoodchuckchuck'
+
+x =
+
+howmanychuckscanawoodchuckchuck
+
+length(x)
+
+ans =
+
+    31
+
+x(4:7)
+
+ans =
+
+many
+
+x(8:9)='tr"
+ x(8:9)='tr"
+       |
+{Error: A MATLAB string constant is not terminated properly.
+} 
+x(8:9)='tr'
+
+x =
+
+howmanytruckscanawoodchuckchuck
+
+for i=27:31
+       x(i)='b'
+   end
+
+x =
+
+howmanytruckscanawoodchuckbhuck
+
+
+x =
+
+howmanytruckscanawoodchuckbbuck
+
+
+x =
+
+howmanytruckscanawoodchuckbbbck
+
+
+x =
+
+howmanytruckscanawoodchuckbbbbk
+
+
+x =
+
+howmanytruckscanawoodchuckbbbbb
+
+for i=1:31
+       if x(i)=='a'
+           x(i)='z'
+       end
+   end
+
+x =
+
+howmznytruckscanawoodchuckbbbbb
+
+
+x =
+
+howmznytruckscznawoodchuckbbbbb
+
+
+x =
+
+howmznytruckscznzwoodchuckbbbbb
+
+x='howmanychuckscanawoodchuckchuckifawoodchuckcouldchuckwood'
+
+x =
+
+howmanychuckscanawoodchuckchuckifawoodchuckcouldchuckwood
+
+x-0
+
+ans =
+
+  Columns 1 through 19
+
+   104   111   119   109    97   110   121    99   104   117    99   107   115    99    97   110    97   119   111
+
+  Columns 20 through 38
+
+   111   100    99   104   117    99   107    99   104   117    99   107   105   102    97   119   111   111   100
+
+  Columns 39 through 57
+
+    99   104   117    99   107    99   111   117   108   100    99   104   117    99   107   119   111   111   100
+
+x-97
+
+ans =
+
+  Columns 1 through 19
+
+     7    14    22    12     0    13    24     2     7    20     2    10    18     2     0    13     0    22    14
+
+  Columns 20 through 38
+
+    14     3     2     7    20     2    10     2     7    20     2    10     8     5     0    22    14    14     3
+
+  Columns 39 through 57
+
+     2     7    20     2    10     2    14    20    11     3     2     7    20     2    10    22    14    14     3
+
+y=x-97
+
+y =
+
+  Columns 1 through 19
+
+     7    14    22    12     0    13    24     2     7    20     2    10    18     2     0    13     0    22    14
+
+  Columns 20 through 38
+
+    14     3     2     7    20     2    10     2     7    20     2    10     8     5     0    22    14    14     3
+
+  Columns 39 through 57
+
+     2     7    20     2    10     2    14    20    11     3     2     7    20     2    10    22    14    14     3
+
+char(y+97)
+
+ans =
+
+howmanychuckscanawoodchuckchuckifawoodchuckcouldchuckwood
+
+ciphertext=mod(y+5,26)
+
+ciphertext =
+
+  Columns 1 through 19
+
+    12    19     1    17     5    18     3     7    12    25     7    15    23     7     5    18     5     1    19
+
+  Columns 20 through 38
+
+    19     8     7    12    25     7    15     7    12    25     7    15    13    10     5     1    19    19     8
+
+  Columns 39 through 57
+
+     7    12    25     7    15     7    19    25    16     8     7    12    25     7    15     1    19    19     8
+
+char(ciphertext+97)
+
+ans =
+
+mtbrfsdhmzhpxhfsfbttihmzhphmzhpnkfbttihmzhphtzqihmzhpbtti
+
+temp=[]
+
+temp =
+
+     []
+
+for i=0:25
+       evetext=mod(ciphertext-i,26);
+       temp=[temp; char(evetext+97)];
+   end
+temp
+
+temp =
+
+mtbrfsdhmzhpxhfsfbttihmzhphmzhpnkfbttihmzhphtzqihmzhpbtti
+lsaqercglygowgereasshglygoglygomjeasshglygogsyphglygoassh
+krzpdqbfkxfnvfdqdzrrgfkxfnfkxfnlidzrrgfkxfnfrxogfkxfnzrrg
+jqyocpaejwemuecpcyqqfejwemejwemkhcyqqfejwemeqwnfejwemyqqf
+ipxnbozdivdltdbobxppedivdldivdljgbxppedivdldpvmedivdlxppe
+howmanychuckscanawoodchuckchuckifawoodchuckcouldchuckwood
+gnvlzmxbgtbjrbzmzvnncbgtbjbgtbjhezvnncbgtbjbntkcbgtbjvnnc
+fmukylwafsaiqaylyummbafsaiafsaigdyummbafsaiamsjbafsaiummb
+eltjxkvzerzhpzxkxtllazerzhzerzhfcxtllazerzhzlriazerzhtlla
+dksiwjuydqygoywjwskkzydqygydqygebwskkzydqygykqhzydqygskkz
+cjrhvitxcpxfnxvivrjjyxcpxfxcpxfdavrjjyxcpxfxjpgyxcpxfrjjy
+biqguhswbowemwuhuqiixwbowewboweczuqiixwbowewiofxwboweqiix
+ahpftgrvanvdlvtgtphhwvanvdvanvdbytphhwvanvdvhnewvanvdphhw
+zgoesfquzmuckusfsoggvuzmucuzmucaxsoggvuzmucugmdvuzmucoggv
+yfndreptyltbjtrernffutyltbtyltbzwrnffutyltbtflcutyltbnffu
+xemcqdosxksaisqdqmeetsxksasxksayvqmeetsxksasekbtsxksameet
+wdlbpcnrwjrzhrpcplddsrwjrzrwjrzxuplddsrwjrzrdjasrwjrzldds
+vckaobmqviqygqobokccrqviqyqviqywtokccrqviqyqcizrqviqykccr
+ubjznalpuhpxfpnanjbbqpuhpxpuhpxvsnjbbqpuhpxpbhyqpuhpxjbbq
+taiymzkotgoweomzmiaapotgowotgowurmiaapotgowoagxpotgowiaap
+szhxlyjnsfnvdnlylhzzonsfnvnsfnvtqlhzzonsfnvnzfwonsfnvhzzo
+rygwkximremucmkxkgyynmremumremuspkgyynmremumyevnmremugyyn
+qxfvjwhlqdltbljwjfxxmlqdltlqdltrojfxxmlqdltlxdumlqdltfxxm
+pweuivgkpcksakiviewwlkpckskpcksqniewwlkpckskwctlkpcksewwl
+ovdthufjobjrzjhuhdvvkjobjrjobjrpmhdvvkjobjrjvbskjobjrdvvk
+nucsgteinaiqyigtgcuujinaiqinaiqolgcuujinaiqiuarjinaiqcuuj
+
+clear
+data
+who
+
+Your variables are:
+
+englishrelfreq  txt1            
+
+englishrelfreq
+
+englishrelfreq =
+
+    0.0820
+    0.0150
+    0.0280
+    0.0430
+    0.1270
+    0.0220
+    0.0200
+    0.0610
+    0.0700
+    0.0020
+    0.0080
+    0.0400
+    0.0240
+    0.0670
+    0.0750
+    0.0190
+    0.0010
+    0.0600
+    0.0630
+    0.0910
+    0.0280
+    0.0100
+    0.0230
+    0.0010
+    0.0200
+    0.0010
+
+txt1
+
+txt1 =
+
+innovembertheenglishforcesofhenryeighthdemolishedthescottisharmyatthebattleofsolwaymossitappearedthathenrywasonthevergeofconqueringscotlandandstealingthecrownofkingjamesfifthafterthebattlethedistraughtscottishkingsufferedacompletementalandphysicalbreakdownandwithdrewtothepalaceatfalklandeventhebirthofadaughtermaryjusttwoweekslatercouldnotrevivetheailingkingitwasasifhehadbeenwaitingfornewsofanheirsothathecoulddieinpeacesafeintheknowledgethathehaddonehisdutyjustaweekaftermarysbirthkingjamesfifthstillonlythirtyyearsolddiedthebabyprincesshadbecomemaryqueenofscotsmarywasbornprematurelyandinitiallytherewasconsiderableconcernthatshewouldnotsurviverumoursinenglandsuggestedthatthebabyhaddiedbutthiswasmerelywishfulthinkingattheenglishcourtwhichwaskeentohearanynewsthatmightdestabilisescotlandinfactmarysoongrewstrongandhealthyandatageninemonthsshewascrownedinthechapelofstirlingcastlesurroundedbythreeearlsbearingonherbehalftheroyalcrownsceptreandswordthefactthatqueenmarywassoyoungofferedscotlandarespitefromenglishincursionsitwouldhavebeendeemedunchivalroushadhenryattemptedtoinvadethecountryofarecentlydeadkingnowundertheruleofaninfantqueeninsteadtheenglishkingdecidedonapolicyofwooingmaryinthehopeofarrangingamarriagebetweenherandhissonedward
+
+length(txt1)
+
+ans =
+
+        1246
+
+ciphertext=vigenere(txt1,[3 1 9 10])
+
+ciphertext =
+
+lowyyfvlhscrhfwqojbripamhtxpkfwbbfrqkuqnhnxvltqoguqovdxdwjbrdsviducrhcjdwmnyitxvzbhwrtbswbyzhbaoguqkwinxuzfkvpwdkfeouhnyidxxtvnblopcfpcvdomkqebdhbusqhcrhdayzoxpnjwqmbvovgrpwijpwfadkfkkwuuowinnltcbdvprwtlywurcklrxjtdpifaogblypquowfvoqujvdomzkzbsfbulufjugpfxdomgluqnuffdruqosbukffjdibuuobwnhwnxwinllscrrgjndvprwfawdshtxtcdzpfohlbvdunbfpdvgoxdufesyfcrhbrvlopulopswxjcdtrpkfqkgcnoqxjswjwqipaxhxbyibwrhjacruqkwinmrvungjnsqqnkffbkifrxwinuqpfvhepowijdkfqkgexxhircgvcimvbddxnonbodhsvkuzbllscrnjwqmbvovgrpwibdlmuyqmhdkjadbznkutxvgeroguqoebkissrxffbckbmlhdxwhnjbbrdohoxpvdxdvnjbbxjcepaxssnwdudbhmhkqerxlurkomhdkfaozbbmrobsgfakemnmrolouocrdubrhxxeoewywtdbyjeouvvyxsbsqfwqobwnvvpqhtcoguqkwuqoebkikbmnlfmlxucrltfkvnnbhmhgltqpxmcrlotsqhjdwinoqhusvilyxscgkjlrzbbuhfwdrinkubwiqffcwijdpjprwencwbksojbovdxdobwnlookfuvkuzbyropbhxbdupwqdomrhbudkzjxgbckjfwsqfvyquqcvingdtlbrxwogjwdkflrdqnvrgbdlsusqhlkvuuovvabrvwnhekiwiaohfjbotkodsrxjpwrhskokbupwinbrzjvfsxgqtlosuaodomczpanwinpddcdkbcaxfnxpbaizbbcrzxeqhxpifaogtlywmjxgbaovqrdhgaypfwqojbrloleutryqtrdzpdvgijfhcnoqenopfmeqdqsybubrvbrdeqoqshkwunwsunnwprxybmowinmrvwduzxpdsnmhocvbenkglrxjoxgxomouuqouvuorgjxlookquzehfwsqtcodecrhfwqojbrnjwqgflsgfmyqbyyojlirgfyrjwqpbailocrhixzhpokusjxjjwqdnjbujjqhcndzfnxkfakqeqsvtxxhefkue
+
+plaintext=vigenere(ciphertext,-[3 1 9 10])
+
+plaintext =
+
+innovembertheenglishforcesofhenryeighthdemolishedthescottisharmyatthebattleofsolwaymossitappearedthathenrywasonthevergeofconqueringscotlandandstealingthecrownofkingjamesfifthafterthebattlethedistraughtscottishkingsufferedacompletementalandphysicalbreakdownandwithdrewtothepalaceatfalklandeventhebirthofadaughtermaryjusttwoweekslatercouldnotrevivetheailingkingitwasasifhehadbeenwaitingfornewsofanheirsothathecoulddieinpeacesafeintheknowledgethathehaddonehisdutyjustaweekaftermarysbirthkingjamesfifthstillonlythirtyyearsolddiedthebabyprincesshadbecomemaryqueenofscotsmarywasbornprematurelyandinitiallytherewasconsiderableconcernthatshewouldnotsurviverumoursinenglandsuggestedthatthebabyhaddiedbutthiswasmerelywishfulthinkingattheenglishcourtwhichwaskeentohearanynewsthatmightdestabilisescotlandinfactmarysoongrewstrongandhealthyandatageninemonthsshewascrownedinthechapelofstirlingcastlesurroundedbythreeearlsbearingonherbehalftheroyalcrownsceptreandswordthefactthatqueenmarywassoyoungofferedscotlandarespitefromenglishincursionsitwouldhavebeendeemedunchivalroushadhenryattemptedtoinvadethecountryofarecentlydeadkingnowundertheruleofaninfantqueeninsteadtheenglishkingdecidedonapolicyofwooingmaryinthehopeofarrangingamarriagebetweenherandhissonedward
+
+coinc(ciphertext,1)
+
+ans =
+
+    40
+
+coinc(ciphertext,2)
+
+ans =
+
+    40
+
+coinc(ciphertext,3)
+
+ans =
+
+    44
+
+coinc(ciphertext,4)
+
+ans =
+
+    72
+
+temp=[]
+
+temp =
+
+     []
+
+for i=1:20
+      temp=[temp; i coinc(ciphertext,i)];
+   end
+temp
+
+temp =
+
+     1    40
+     2    40
+     3    44
+     4    72
+     5    45
+     6    29
+     7    41
+     8    69
+     9    33
+    10    41
+    11    45
+    12    86
+    13    59
+    14    44
+    15    51
+    16    70
+    17    44
+    18    47
+    19    50
+    20    72
+
+s1=choose(ciphertext,4,1)
+
+s1 =
+
+lyhhoihkbkhlgvwddhwizrwhgwuvkuitlfdqhqhznmvwwkwwldwwkjigpwqdkfugdlursfiohwlrdwdxzhdfguyhllwdkgqwihihrwrgqfiwqhwkghgmdnhulnmvwlqkbuggesfkhhbhvvbesdhqlokzrgerudhowyuxqovhgweklxlvhlxlqwqvxkzhruqwpwwovolfurhudhkgjqqvdrgkdrlqvvrhwhodjhkwrfqsdzwdkxpzrqigwgvhpoluqzghqpqyrdqwswywrudhbgjxuurlqhqdhonggqorrplhhujduhzkqvhu
+
+s2=choose(ciphertext,4,2)
+
+s2 =
+
+ofsfjptffuntudjsucmtbtbbuizpfhdvopoebhdojbgiffuitvtultfbqfuozbfpoufubfbbwisgvfstplupoffbooxtfcxjpxbjuivjqffipeifeivvxbszsjbgimmjzteubsfbdnrodnxpsumeumfbofmoouxetjvsfbvtuubbfutnmtmohihisjbfibfijebjdbouzoxpobzbffuitxjfqgshuvveiftspsbizstuopidbfbbzhftmbqgfjottpicefdbvesuupbivzsoeloouvgouftefjjffbjgjboipsjnjcffetee
+
+s3=choose(ciphertext,4,3)
+
+s3 =
+
+wvcwbaxwrqxqqxbvcjnxhbyaqnfwenxnpcmbucaxwvrjakuncplrrdaluvjmbujfmqfqujuwnncjpahcfbndxecrppjrqnjwabwaqnunnbrnfpjqxrcbnovbcwvrbuhanxrqkrbmxjdxxjjandhrrhabbanlcbxwdevbwwpcqqkmmcfnhqctjnulclbwnwfjpnkbxwovbpbwmujcwvqnlwwlnbuluawkajkrwkunjxlamanccnabxxaljarawblrrdjnnmqubqhnnrmnwxncnrxmqujozwccwbwlmylfwacxojwjjnnaqxf
+
+s4=choose(ciphertext,4,4)
+
+s4 =
+
+ylrqrmpbqnvoodrirdyvwszokxkdoyxbcvkdsrypqoppdkonbrycxpoyoovzsluxgndokdunxlrnrwtdovbvdsrvuscpkosqxyrckmnskkxuvodkxcidodklrqopdyddkvooixclwbopdbcxwbkxkdomskmorreyboysqnqokoinlrkbgprsdosygrudkicdrcsodnkkybdqrdxksycgbodrvdskobnioboxropbvgoocnpdaxicepoyxodyqreydvfooesbrokwnxomdpmvkxgoooxkesorqrqsyyiyqirzkxqbqdxksxk
+
+[f, relf]=zfrequency(s1)
+
+f =
+
+     0
+     5
+     0
+    23
+     4
+     8
+    21
+    38
+     9
+     5
+    18
+    20
+     3
+     4
+    11
+     6
+    25
+    19
+     5
+     1
+    19
+    15
+    32
+     7
+     5
+     9
+
+
+relf =
+
+         0
+    0.0160
+         0
+    0.0737
+    0.0128
+    0.0256
+    0.0673
+    0.1218
+    0.0288
+    0.0160
+    0.0577
+    0.0641
+    0.0096
+    0.0128
+    0.0353
+    0.0192
+    0.0801
+    0.0609
+    0.0160
+    0.0032
+    0.0609
+    0.0481
+    0.1026
+    0.0224
+    0.0160
+    0.0288
+
+cr=corr(relf)
+
+cr =
+
+    0.0335
+    0.0309
+    0.0413
+    0.0643
+    0.0389
+    0.0329
+    0.0358
+    0.0420
+    0.0349
+    0.0352
+    0.0365
+    0.0327
+    0.0361
+    0.0377
+    0.0447
+    0.0393
+    0.0424
+    0.0365
+    0.0465
+    0.0386
+    0.0358
+    0.0336
+    0.0382
+    0.0342
+    0.0341
+    0.0444
+
+[val,pos]=max(cr)
+
+val =
+
+    0.0643
+
+
+pos =
+
+     4
+
+[f, relf]=zfrequency(s2)
+
+f =
+
+     0
+    35
+     4
+     8
+    15
+    40
+     7
+     6
+    20
+    20
+     0
+     3
+     9
+     5
+    24
+    15
+     4
+     1
+    17
+    22
+    26
+    13
+     1
+     8
+     0
+     9
+
+
+relf =
+
+         0
+    0.1122
+    0.0128
+    0.0256
+    0.0481
+    0.1282
+    0.0224
+    0.0192
+    0.0641
+    0.0641
+         0
+    0.0096
+    0.0288
+    0.0160
+    0.0769
+    0.0481
+    0.0128
+    0.0032
+    0.0545
+    0.0705
+    0.0833
+    0.0417
+    0.0032
+    0.0256
+         0
+    0.0288
+
+cr=corr(relf)
+
+cr =
+
+    0.0401
+    0.0660
+    0.0376
+    0.0314
+    0.0338
+    0.0428
+    0.0339
+    0.0356
+    0.0391
+    0.0325
+    0.0359
+    0.0356
+    0.0436
+    0.0408
+    0.0445
+    0.0378
+    0.0448
+    0.0397
+    0.0334
+    0.0352
+    0.0384
+    0.0371
+    0.0304
+    0.0474
+    0.0324
+    0.0314
+
+[val,pos]=max(cr)
+
+val =
+
+    0.0660
+
+
+pos =
+
+     2
+
+[f, relf]=zfrequency(s3)
+
+f =
+
+    22
+    25
+    22
+     6
+     3
+     9
+     0
+     7
+     0
+    23
+     7
+    13
+    12
+    35
+     4
+     9
+    18
+    19
+     0
+     1
+    15
+     9
+    28
+    21
+     2
+     1
+
+
+relf =
+
+    0.0707
+    0.0804
+    0.0707
+    0.0193
+    0.0096
+    0.0289
+         0
+    0.0225
+         0
+    0.0740
+    0.0225
+    0.0418
+    0.0386
+    0.1125
+    0.0129
+    0.0289
+    0.0579
+    0.0611
+         0
+    0.0032
+    0.0482
+    0.0289
+    0.0900
+    0.0675
+    0.0064
+    0.0032
+
+cr=corr(relf)
+
+cr =
+
+    0.0330
+    0.0347
+    0.0375
+    0.0385
+    0.0335
+    0.0425
+    0.0327
+    0.0350
+    0.0428
+    0.0636
+    0.0361
+    0.0309
+    0.0347
+    0.0443
+    0.0339
+    0.0354
+    0.0374
+    0.0332
+    0.0383
+    0.0403
+    0.0434
+    0.0354
+    0.0446
+    0.0413
+    0.0427
+    0.0352
+
+[val,pos]=max(cr)
+
+val =
+
+    0.0636
+
+
+pos =
+
+    10
+
+[f, relf]=zfrequency(s4)
+
+f =
+
+     1
+    16
+    12
+    30
+     5
+     1
+     6
+     0
+     9
+     0
+    28
+     6
+     6
+    12
+    42
+    13
+    14
+    25
+    18
+     1
+     5
+    13
+     5
+    21
+    19
+     3
+
+
+relf =
+
+    0.0032
+    0.0514
+    0.0386
+    0.0965
+    0.0161
+    0.0032
+    0.0193
+         0
+    0.0289
+         0
+    0.0900
+    0.0193
+    0.0193
+    0.0386
+    0.1350
+    0.0418
+    0.0450
+    0.0804
+    0.0579
+    0.0032
+    0.0161
+    0.0418
+    0.0161
+    0.0675
+    0.0611
+    0.0096
+
+cr=corr(relf)
+
+cr =
+
+    0.0376
+    0.0342
+    0.0349
+    0.0423
+    0.0361
+    0.0311
+    0.0444
+    0.0355
+    0.0322
+    0.0388
+    0.0651
+    0.0382
+    0.0341
+    0.0356
+    0.0418
+    0.0339
+    0.0369
+    0.0382
+    0.0314
+    0.0332
+    0.0347
+    0.0436
+    0.0402
+    0.0451
+    0.0375
+    0.0444
+
+[val,pos]=max(cr)
+
+val =
+
+    0.0651
+
+
+pos =
+
+    11
+
+txt1
+
+txt1 =
+
+innovembertheenglishforcesofhenryeighthdemolishedthescottisharmyatthebattleofsolwaymossitappearedthathenrywasonthevergeofconqueringscotlandandstealingthecrownofkingjamesfifthafterthebattlethedistraughtscottishkingsufferedacompletementalandphysicalbreakdownandwithdrewtothepalaceatfalklandeventhebirthofadaughtermaryjusttwoweekslatercouldnotrevivetheailingkingitwasasifhehadbeenwaitingfornewsofanheirsothathecoulddieinpeacesafeintheknowledgethathehaddonehisdutyjustaweekaftermarysbirthkingjamesfifthstillonlythirtyyearsolddiedthebabyprincesshadbecomemaryqueenofscotsmarywasbornprematurelyandinitiallytherewasconsiderableconcernthatshewouldnotsurviverumoursinenglandsuggestedthatthebabyhaddiedbutthiswasmerelywishfulthinkingattheenglishcourtwhichwaskeentohearanynewsthatmightdestabilisescotlandinfactmarysoongrewstrongandhealthyandatageninemonthsshewascrownedinthechapelofstirlingcastlesurroundedbythreeearlsbearingonherbehalftheroyalcrownsceptreandswordthefactthatqueenmarywassoyoungofferedscotlandarespitefromenglishincursionsitwouldhavebeendeemedunchivalroushadhenryattemptedtoinvadethecountryofarecentlydeadkingnowundertheruleofaninfantqueeninsteadtheenglishkingdecidedonapolicyofwooingmaryinthehopeofarrangingamarriagebetweenherandhissonedward
+
+fr=zfrequency(txt1)
+
+fr =
+
+   109
+    21
+    35
+    60
+   155
+    33
+    34
+    81
+    77
+     4
+    13
+    48
+    25
+    98
+    74
+    14
+     4
+    74
+    74
+   110
+    31
+    10
+    32
+     0
+    30
+     0
+
+length(txt1)*englishrelfreq
+
+ans =
+
+  102.1720
+   18.6900
+   34.8880
+   53.5780
+  158.2420
+   27.4120
+   24.9200
+   76.0060
+   87.2200
+    2.4920
+    9.9680
+   49.8400
+   29.9040
+   83.4820
+   93.4500
+   23.6740
+    1.2460
+   74.7600
+   78.4980
+  113.3860
+   34.8880
+   12.4600
+   28.6580
+    1.2460
+   24.9200
+    1.2460
+
+efr=round(ans)
+
+efr =
+
+   102
+    19
+    35
+    54
+   158
+    27
+    25
+    76
+    87
+     2
+    10
+    50
+    30
+    83
+    93
+    24
+     1
+    75
+    78
+   113
+    35
+    12
+    29
+     1
+    25
+     1
+
+[fr efr]
+
+ans =
+
+   109   102
+    21    19
+    35    35
+    60    54
+   155   158
+    33    27
+    34    25
+    81    76
+    77    87
+     4     2
+    13    10
+    48    50
+    25    30
+    98    83
+    74    93
+    14    24
+     4     1
+    74    75
+    74    78
+   110   113
+    31    35
+    10    12
+    32    29
+     0     1
+    30    25
+     0     1
+
+clear
+Key=floor(26*rand(4,4))
+
+Key =
+
+    25    12    23     0
+     4    20    20    22
+    25     3    24    24
+    24    10    17    17
+
+d=det(Key)
+
+d =
+
+   1.3631e+05
+
+d=round(d)
+
+d =
+
+      136314
+
+Key=floor(26*rand(4,4))
+
+Key =
+
+    19     4     1     8
+    19    18     2    24
+    10     0    21     0
+    17     7    18    11
+
+d=det(Key)
+
+d =
+
+   7.7220e+03
+
+d=round(d)
+
+d =
+
+        7722
+
+Key=floor(26*rand(4,4))
+
+Key =
+
+     9    12    19     4
+    19    11     7     3
+    20    16    17    12
+     4    18    17    24
+
+d=det(Key)
+
+d =
+
+      -17826
+
+d=round(d)
+
+d =
+
+      -17826
+
+Key=floor(26*rand(4,4))
+
+Key =
+
+     8     6    24     6
+    15    13    14    21
+     5    18     3     6
+    19    23     3    21
+
+d=det(Key)
+
+d =
+
+  -3.2292e+04
+
+d=round(d)
+
+d =
+
+      -32292
+
+Key=floor(26*rand(4,4))
+
+Key =
+
+     6     6    21     7
+    24    16    15    19
+     9    12    14    19
+     5     9    23     9
+
+d=det(Key)
+
+d =
+
+       -9910
+
+d=round(d)
+
+d =
+
+       -9910
+
+Key=floor(26*rand(4,4))
+
+Key =
+
+    14    20    12    20
+     1    24     0     8
+     1     3     8    13
+    13    14     4     4
+
+d=det(Key)
+
+d =
+
+  -4.4400e+03
+
+d=round(d)
+
+d =
+
+       -4440
+
+Key=floor(26*rand(4,4))
+
+Key =
+
+    15    19    23    25
+     6    11     3     2
+    17     2    21    11
+    17     5    13     2
+
+d=det(Key)
+
+d =
+
+  -4.1370e+03
+
+d=round(d)
+
+d =
+
+       -4137
+
+recipd=powermod(d,-1,26)
+
+recipd =
+
+    17
+
+Kinv=   recipd  *d*inv(Key)
+
+Kinv =
+
+   1.0e+04 *
+
+   -1.8972    4.6257    4.3248   -4.6971
+    0.7123   -2.3732   -1.4977    1.7068
+    2.5143   -5.8089   -5.6559    5.4876
+   -1.9975    4.3724    3.7468   -3.5275
+
+Kinv=round(Kinv)
+
+Kinv =
+
+      -18972       46257       43248      -46971
+        7123      -23732      -14977       17068
+       25143      -58089      -56559       54876
+      -19975       43724       37468      -35275
+
+Kinv=mod(Kinv,26)
+
+Kinv =
+
+     8     3    10    11
+    25     6    25    12
+     1    21    17    16
+    19    18     2     7
+
+mod(Key*Kinv,26)
+
+ans =
+
+     1     0     0     0
+     0     1     0     0
+     0     0     1     0
+     0     0     0     1
+
+data
+txt1
+
+txt1 =
+
+innovembertheenglishforcesofhenryeighthdemolishedthescottisharmyatthebattleofsolwaymossitappearedthathenrywasonthevergeofconqueringscotlandandstealingthecrownofkingjamesfifthafterthebattlethedistraughtscottishkingsufferedacompletementalandphysicalbreakdownandwithdrewtothepalaceatfalklandeventhebirthofadaughtermaryjusttwoweekslatercouldnotrevivetheailingkingitwasasifhehadbeenwaitingfornewsofanheirsothathecoulddieinpeacesafeintheknowledgethathehaddonehisdutyjustaweekaftermarysbirthkingjamesfifthstillonlythirtyyearsolddiedthebabyprincesshadbecomemaryqueenofscotsmarywasbornprematurelyandinitiallytherewasconsiderableconcernthatshewouldnotsurviverumoursinenglandsuggestedthatthebabyhaddiedbutthiswasmerelywishfulthinkingattheenglishcourtwhichwaskeentohearanynewsthatmightdestabilisescotlandinfactmarysoongrewstrongandhealthyandatageninemonthsshewascrownedinthechapelofstirlingcastlesurroundedbythreeearlsbearingonherbehalftheroyalcrownsceptreandswordthefactthatqueenmarywassoyoungofferedscotlandarespitefromenglishincursionsitwouldhavebeendeemedunchivalroushadhenryattemptedtoinvadethecountryofarecentlydeadkingnowundertheruleofaninfantqueeninsteadtheenglishkingdecidedonapolicyofwooingmaryinthehopeofarrangingamarriagebetweenherandhissonedward
+
+block(txt1,1,4)
+
+ans =
+
+iveelfehyheidstaaetfwotedtrshrfqicanenewkjstthttiatthgfdmtnahcrdairopcfletioatauweacdrveiitahdntfefeotodncftnethdedjakerikjstinhyrddbpcheeyessybpaenilhwodboraeltvrunlsedtbhiuiseiuintnsuhweorntmttlslicroeraehdgnnsaodhaoinssoetelagehtocnpawtahumwonfdtdsemlirnwdenmnvoantptvtoraeydgurroinenaelkddnloomieergarewhnser
+nereioseetmstcirtblsasaathyoegcunondagcniafheethsustkseapetnyaeontetaeaavhrfuersoktoneeannwsebwiowaithuipeehodhedhuuwaryriafhlliysdtareacmqncmwortldtleanelnntwdsiureausttaaetsmlslnghghriaehaehidaicantynwonayaeethswiepfrgtuudhesrorahyrstnohcaeaaygeslapfeinssohbdecaudrttoahuyrndknntufntesdeiieeaifianhorimibeedsdd
+nmtnsronihohhosmtaeoysprhewnveoegtdsltronmiarbletgciiurclmadslawdhwhlalneetagrytwseuovtiggaiheanrsnrheleesiewgahoitsefmstnmislyreoihbisdoauooaareuyiiyrssrectsonuvmsnngthhbddtweyhtkaelctcsnenwagebsonfmsgsndlatnmhecnnceslclrnbrabinbleaocrdrettersoorcarirnsciiuaeedhlshyeeidenoeteiodhlafqnttnsncdpcwnrtofanaaeerhowa
+obhghcfrgdleethyhtolmipeanateonrslatihofgefftaedrhosnfeoeelpibknwdteatkdnbhdhmjtelrltihlkisfaeignohsacdiaankletansytetabhgeftottaleeynsbmreftrsnmranateciacehhuoreoigdgeaeydbharwfhiteiowhktaysthsietdaaortghtnaioswrethltiaerdyerenhefrlweesdftqnysufeonetoghuotlveeuirheamdnectfclanweeenauiehghgiooyogyhpangrgtnainaa
+
+plaintext=block(txt1,1,4)-97
+
+plaintext =
+
+  Columns 1 through 19
+
+     8    21     4     4    11     5     4     7    24     7     4     8     3    18    19     0     0     4    19
+    13     4    17     4     8    14    18     4     4    19    12    18    19     2     8    17    19     1    11
+    13    12    19    13    18    17    14    13     8     7    14     7     7    14    18    12    19     0     4
+    14     1     7     6     7     2     5    17     6     3    11     4     4    19     7    24     7    19    14
+
+  Columns 20 through 38
+
+     5    22    14    19     4     3    19    17    18     7    17     5    16     8     2     0    13     4    13
+    18     0    18     0     0    19     7    24    14     4     6     2    20    13    14    13     3     0     6
+    14    24    18    15    17     7     4    22    13    21     4    14     4     6    19     3    18    11    19
+    11    12     8    15     4     0    13     0    19     4    14    13    17    18    11     0    19     8     7
+
+  Columns 39 through 57
+
+     4    22    10     9    18    19    19     7    19    19     8     0    19    19     7     6     5     3    12
+     2    13     8     0     5     7     4     4    19     7    18    20    18    19    10    18     4     0    15
+    17    14    13    12     8     0    17     1    11     4    19     6     2     8     8    20    17     2    11
+    14     5     6     4     5     5    19     0     4     3    17     7    14    18    13     5     4    14     4
+
+  Columns 58 through 76
+
+    19    13     0     7     2    17     3     0     8    17    14    15     2     5    11     4    19     8    14
+     4    19    13    24     0     4    14    13    19     4    19     0     4     0     0    21     7    17     5
+    12     0     3    18    11     0    22     3     7    22     7    11     0    11    13     4     4    19     0
+     4    11    15     8     1    10    13    22     3    19     4     0    19    10     3    13     1     7     3
+
+  Columns 77 through 95
+
+     0    19     0    20    22     4     0     2     3    17    21     4     8     8    19     0     7     3    13
+    20     4    17    18    14    10    19    14    13     4     4     0    13    13    22    18     4     1    22
+     6    17    24    19    22    18     4    20    14    21    19     8     6     6     0     8     7     4     0
+     7    12     9    19     4    11    17    11    19     8     7    11    10     8    18     5     0     4     8
+
+  Columns 96 through 114
+
+    19     5     4     5     4    14    19    14     3    13     2     5    19    13     4    19     7     3     4
+     8    14    22     0     8    19     7    20     8    15     4     4     7    14     3     7     4     3     7
+    13    17    18    13    17     7     4    11     4     4    18     8     4    22     6     0     7    14     8
+     6    13    14     7    18     0     2     3     8     0     0    13    10    11     4    19     0    13    18
+
+  Columns 115 through 133
+
+     3     9     0    10     4    17     8    10     9    18    19     8    13     7    24    17     3     3     1
+    20    20    22     0    17    24    17     8     0     5     7    11    11     8    24    18     3    19     0
+    19    18     4     5    12    18    19    13    12     8    18    11    24    17     4    14     8     7     1
+    24    19     4    19     0     1     7     6     4     5    19    14    19    19     0    11     4     4    24
+
+  Columns 134 through 152
+
+    15     2     7     4     4    24     4    18    18    24     1    15     0     4    13     8    11     7    22
+    17     4     0     2    12    16    13     2    12    22    14    17    19    11     3    19    11     4     0
+     8    18     3    14     0    20    14    14     0     0    17     4    20    24     8     8    24    17    18
+    13    18     1    12    17     4     5    19    17    18    13    12    17     0    13     0    19     4     2
+
+  Columns 153 through 171
+
+    14     3     1    14    17     0     4    11    19    21    17    20    13    11    18     4     3    19     1
+    13     4    11    13    13    19    22     3    18     8    20    17     4     0    20    18    19    19     0
+    18    17     4     2    19    18    14    13    20    21    12    18    13    13     6    19     7     7     1
+     8     0     2     4     7     7    20    14    17     4    14     8     6     3     6     4     0     4    24
+
+  Columns 172 through 190
+
+     7     8    20     8    18     4     8    20     8    13    19    13    18    20     7    22     4    14    17
+     0     4    19    18    12    11    18    11    13     6     7     6     7    17     8     0     4     7     0
+     3     3    19    22     4    24     7    19    10     0     4    11     2    19     2    18    13     4    13
+     3     1     7     0    17    22     5     7     8    19     4     8    14    22     7    10    19     0    24
+
+  Columns 191 through 209
+
+    13    19    12    19    19    11    18    11     8     2    17    14     4    17     0     4     7     3     6
+     4     7     8     3     0     8     2     0    13    19    24    13    22    14    13     0    24     0     4
+    22     0     6     4     1    18    14    13     5    12    18     6    18    13     3    11     0    19    13
+    18    19     7    18     8     4    19     3     0     0    14    17    19     6     7    19    13     0     8
+
+  Columns 210 through 228
+
+    13    13    18     0    14     3     7     0    14     8    13    18    18    14     4    19     4    11     0
+     4    19     7    18    22     8     4    15     5    17     6    19    20    20     3     7     4    18    17
+    12     7     4     2    13    13     2     4    18    11     2    11    17    13     1    17     0     1     8
+    14    18    22    17     4    19     7    11    19     8     0     4    17     3    24     4    17     4    13
+
+  Columns 229 through 247
+
+     6     4     7    19    14     2    13    15     0    22    19     0     7    20    12    22    14    13     5
+    14    17     0     7    24    17    18    19    13    14     7     2     0     4     0     0    24     6     4
+    13     1    11     4     0    14     2    17     3    17     4    19    19     4    17    18    14    14    17
+     7     4     5    17    11    22     4     4    18     3     5    19    16    13    24    18    20     5     4
+
+  Columns 248 through 266
+
+     3    19     3    18     4    12    11     8    17    13    22     3     4    13    12    13    21    14     0
+    18    11     0    15     5     4     8    13    18    18    14     7     1     3     4     2     0    20     3
+     2     0    17     8    17    13    18     2     8     8    20     0     4     4     3     7    11    18     7
+    14    13     4    19    14     6     7    20    14    19    11    21     4     4    20     8    17     7     4
+
+  Columns 267 through 285
+
+    13    19    15    19    21    19    14    17     0     4    24     3     6    20    17    17    14     8    13
+    17    19    19    14     0     7    20    24    17    13     3    10    13    13    19    20     5    13    19
+    24     4     4     8     3     4    13    14     4    19     4     8    14     3     7    11     0     5    16
+     0    12     3    13     4     2    19     5     2    11     0    13    22     4     4     4    13     0    20
+
+  Columns 286 through 304
+
+     4    13     0     4    11    10     3     3    13    11    14    14    12     8     4     4    17     6     0
+     4    18     3     4     8     8     4     4     0     8     5     8     0    13     7    14    17     8    12
+    13    19    19    13    18    13     2     3    15     2    22    13    17    19    14     5     0    13     0
+     8     4     7     6     7     6     8    14    14    24    14     6    24     7    15     0    13     6    17
+
+  Columns 305 through 312
+
+    17     4    22     7    13    18     4    17
+     8     1     4     4     3    18     3     3
+     0     4     4    17     7    14    22     0
+     6    19    13     0     8    13     0     0
+
+ciphertext=mod(Key*plaintext,26)
+
+ciphertext =
+
+  Columns 1 through 19
+
+     2    16     7    13    22     2    17    21    16     0     1    21    17    13    12     3    11     8     0
+    24     0    22    15    14     5    14     3    16    18    12    15    22     2    10    11    20    21    15
+    17     4     6    25     8    24    11    15     0    25    13    25    20     7    14     4    20    19    11
+     8    15    24     9     7    16    12     4    24    25    20    13    11    16    13     3    18     7    16
+
+  Columns 20 through 38
+
+     0    12    22    17     5    21     3    21    10    10     5     6    19    19    20     4    23    19    11
+     6    20    14     7     5    14    21    16     1     1     0    16    24    11    11    22    21    21     7
+    16    22    12    23     1     2    18    19    10    14    19     6    11    18    10    11     8    23     7
+    15     8     6     2    11     3    20    19    11     4     9    17    16     3     9     0    14    19    18
+
+  Columns 39 through 57
+
+     7    10    23    17    24    23     5    22    11    13    24    17     9     6    24     3    18    25    12
+    21    15    17    20    15    19    13    11     0     1    25    18     8    19    20    18     3     0    18
+    11    21     5     7    19     2    13    18    12    12     4     9     9    25     8    15     0    13    15
+    15     7     1     5     3     4     4    22    23     0    13    10    25    12    13    20    22     1    14
+
+  Columns 58 through 76
+
+     9    25    15     5    22     9    24     8    15    12     0    10     9     6    19    18    15    15    16
+    20    23     0    12    21    10     4    14    24    16    10    19    16     5     7     7    23    20    15
+     3    16    20     9    16    17     8    19    16     6    25    18    17    10    25    25    16    22    21
+    13     0     4    21    23    17    17    18    16     9    16     8    14    14    24    17    22    14     9
+
+  Columns 77 through 95
+
+    17    12     8    20     6     3    20    17    23     0    15    25     1     3     9     1     4    22     7
+    18    25    17    23    22     2    21    14     7    17     7    18    21    17     2    24     3    23    24
+     9    14    13    22    24    15    23     5     8    20     9    19     8    12    19    25    14    25    15
+    10    16    25    13    10    10    25    22    24     0    14    12    13     9     1    22    22    12     9
+
+  Columns 96 through 114
+
+     2    17    20     3    13     4    14     8    21     0     0    10     6    20    17     9     4    21    21
+    19     1    10     5    17     2    25     5     4    21     6    20    15     8     5    21     3    15     5
+     2    15    20    19    15     7     1    22     5    23     4    14    11     0    10     0    14     0     6
+    24    12    24     8     1     8    24    19     3    10     2     1    14     1    13     6    22    14     9
+
+  Columns 115 through 133
+
+     6     0    12    12     9     6    15    23    17    24     7    22     1     5    24    24    22    17    14
+     5     2     2     9    13     6    20    17    20    15    23    22    23    11     4     0     5    22     5
+     0     0    16    16    16    24    22     5     7    19    14    23    20    25    20    12     9    20    16
+     4     5    14    13    23    21    14     1     5     3     6    24     2     2     8    11    22    11     0
+
+  Columns 134 through 152
+
+    17     8    17    18    11     2     0    13    13     6     9     4    24    15     7    15    23    22    14
+    15    16     1     8     8    24    11     2    14     6     3     1    17     9     5    21    11    15     8
+     2    20    11     4    19    20     1     7    23     0    25    11    21    22    18     4    12     8    20
+     2    12     4    24     6     2    13    16    10     8    22     0    25    19     2    23    20     4    14
+
+  Columns 153 through 171
+
+     5    18     2     5    22    14     0    13     4    10    13    15    18    19     2     3    21    23    14
+    11     9    13     7     4    17    10    10    16    25    22    13    17     7    20     1    14    14     5
+     2     0    15    12    11    25     2    22     4     0     7     8    22    25    18     1     2     6    16
+     7     6    24    25    17     5    10     9     5     2     1    25     6    24     2    23     3    23     0
+
+  Columns 172 through 190
+
+    15     4    25     6     1    19    20     3    17     4    12     8    19    24    10     6     0    19    10
+     5    25    10     0     0     1    17     0     3     0     3    11    11    18    20    24    15    17     7
+     7    10    22    10     3     4    10     6    18     0    23     6    22     1    20     4    12    24    20
+     8    15    20    18    10    11    15     6     9     3     2    20     5    14    17     4     9    13    12
+
+  Columns 191 through 209
+
+     5     9    21     0    14    25    13    19    14    17    19     6    15     8    23     8     2    14    15
+    16    21    10    13     3     8     2     7    24    23     6    19    20    21    10    17    20    23     5
+     5     0     7    13    16     1     7    25     7    12    11     5    23     6    10    14    24     8     3
+    17     6    24    10    14     1    16    24     6    25    21    25     8    20    14    15     5    12    21
+
+  Columns 210 through 228
+
+    13    23     5     7    13     9    12     2    24    12    17    22    10     2    12    25    15     6     0
+     4     6     7     4     9     1     2    17    23    24    20    20    23    11     4    16    24    15     3
+    11     6    22     5     1     3    12     1     3    21    15    21     6    12    21    10     3     2     7
+     9     1    21    20     5    12    23    19    15    16    17     6    11    19    14    15    18    12     7
+
+  Columns 229 through 247
+
+    24    12    15    25     5     3     7    11    12    22    11    14     6    13     1    24     6     2    18
+     9    14     7     3     6    25     4    20     6     5     5    13     1    20    15    14    14    14     3
+    12    11    15    10    17     6     5    18     1    12     8    14    18     3    19    14    20    10     0
+    17    18    12     2    16     7     7     7    10    21     4     9     8    22     5    20     8     1    22
+
+  Columns 248 through 266
+
+     3    13    16    18    12     3    22     3    13     0     5     1    11     2    19    22     5     9     6
+    16     1    25    23     2    11    14     3    14     0     4     7     3     1     9     7    11     8    10
+    23    20    10    11    17     5     8     8    23    10     7    10    16    17     1    18    21     5    15
+    13    14    20     3     4    15     7     7    17    11    24    24     3    10    17     0    14    14    10
+
+  Columns 267 through 285
+
+     4    24    25    20    16    14    12    14    23     5    15    16    13    14    19     0     6    14    20
+    25    21     5     6    13    25    17     2    21    12     7    22     5    20     2    25     9    24    11
+     5     5    20    12    22     1     6    10    10    16     4    18    14     5    24     6     1     7     9
+    20     0    18     3    14    24    25     3    11    12     7    23     3    10    15    20     3     6    18
+
+  Columns 286 through 304
+
+    11     8    19    13    22    23     3    20     6     1    17     5     1    17     6    25    19    15     3
+    19     3     0    15    14    17     6    21    21     0    25    15    15     2    17    11     3    19    10
+    21    24    14    25     8     5     7    16    14    15     6    21    19    14    21    19    24    15     3
+    13    20    16     9     7     1     9     8     2    15     5    17     5    20     3    21    10    11    16
+
+  Columns 305 through 312
+
+    11    22    17     0    15    11    25     0
+    20     7     6     7    18    10    19     5
+     7    25    11    16    20    25    16     9
+     3     7     4    22     5     6     5    18
+
+actualciphertext=block(ciphertext,-1,4)
+
+actualciphertext =
+
+  Columns 1 through 19
+
+     2    24    17     8    16     0     4    15     7    22     6    24    13    15    25     9    22    14     8
+
+  Columns 20 through 38
+
+     7     2     5    24    16    17    14    11    12    21     3    15     4    16    16     0    24     0    18
+
+  Columns 39 through 57
+
+    25    25     1    12    13    20    21    15    25    13    17    22    20    11    13     2     7    16    12
+
+  Columns 58 through 76
+
+    10    14    13     3    11     4     3    11    20    20    18     8    21    19     7     0    15    11    16
+
+  Columns 77 through 95
+
+     0     6    16    15    12    20    22     8    22    14    12     6    17     7    23     2     5     5     1
+
+  Columns 96 through 114
+
+    11    21    14     2     3     3    21    18    20    21    16    19    19    10     1    10    11    10     1
+
+  Columns 115 through 133
+
+    14     4     5     0    19     9     6    16     6    17    19    24    11    16    19    11    18     3    20
+
+  Columns 134 through 152
+
+    11    10     9     4    22    11     0    23    21     8    14    19    21    23    19    11     7     7    18
+
+  Columns 153 through 171
+
+     7    21    11    15    10    15    21     7    23    17     5     1    17    20     7     5    24    15    19
+
+  Columns 172 through 190
+
+     3    23    19     2     4     5    13    13     4    22    11    18    22    11     0    12    23    13     1
+
+  Columns 191 through 209
+
+    12     0    24    25     4    13    17    18     9    10     9     8     9    25     6    19    25    12    24
+
+  Columns 210 through 228
+
+    20     8    13     3    18    15    20    18     3     0    22    25     0    13     1    12    18    15    14
+
+  Columns 229 through 247
+
+     9    20     3    13    25    23    16     0    15     0    20     4     5    12     9    21    22    21    16
+
+  Columns 248 through 266
+
+    23     9    10    17    17    24     4     8    17     8    14    19    18    15    24    16    16    12    16
+
+  Columns 267 through 285
+
+     6     9     0    10    25    16    10    19    18     8     9    16    17    14     6     5    10    14    19
+
+  Columns 286 through 304
+
+     7    25    24    18     7    25    17    15    23    16    22    15    20    22    14    16    15    21     9
+
+  Columns 305 through 323
+
+    17    18     9    10    12    25    14    16     8    17    13    25    20    23    22    13     6    22    24
+
+  Columns 324 through 342
+
+    10     3     2    15    10    20    21    23    25    17    14     5    22    23     7     8    24     0    17
+
+  Columns 343 through 361
+
+    20     0    15     7     9    14    25    18    19    12     1    21     8    13     3    17    12     9     9
+
+  Columns 362 through 380
+
+     2    19     1     1    24    25    22     4     3    14    22    22    23    25    12     7    24    15     9
+
+  Columns 381 through 399
+
+     2    19     2    24    17     1    15    12    20    10    20    24     3     5    19     8    13    17    15
+
+  Columns 400 through 418
+
+     1     4     2     7     8    14    25     1    24     8     5    22    19    21     4     5     3     0    21
+
+  Columns 419 through 437
+
+    23    10     0     6     4     2    10    20    14     1     6    15    11    14    20     8     0     1    17
+
+  Columns 438 through 456
+
+     5    10    13     9    21     0     6     4     3    14    22    21    15     0    14    21     5     6     9
+
+  Columns 457 through 475
+
+     6     5     0     4     0     2     0     5    12     2    16    14    12     9    16    13     9    13    16
+
+  Columns 476 through 494
+
+    23     6     6    24    21    15    20    22    14    23    17     5     1    17    20     7     5    24    15
+
+  Columns 495 through 513
+
+    19     3     7    23    14     6    22    22    23    24     1    23    20     2     5    11    25     2    24
+
+  Columns 514 through 532
+
+     4    20     8    24     0    12    11    22     5     9    22    17    22    20    11    14     5    16     0
+
+  Columns 533 through 551
+
+    17    15     2     2     8    16    20    12    17     1    11     4    18     8     4    24    11     8    19
+
+  Columns 552 through 570
+
+     6     2    24    20     2     0    11     1    13    13     2     7    16    13    14    23    10     6     6
+
+  Columns 571 through 589
+
+     0     8     9     3    25    22     4     1    11     0    24    17    21    25    15     9    22    19     7
+
+  Columns 590 through 608
+
+     5    18     2    15    21     4    23    23    11    12    20    22    15     8     4    14     8    20    14
+
+  Columns 609 through 627
+
+     5    11     2     7    18     9     0     6     2    13    15    24     5     7    12    25    22     4    11
+
+  Columns 628 through 646
+
+    17    14    17    25     5     0    10     2    10    13    10    22     9     4    16     4     5    10    25
+
+  Columns 647 through 665
+
+     0     2    13    22     7     1    15    13     8    25    18    17    22     6    19     7    25    24     2
+
+  Columns 666 through 684
+
+    20    18     2     3     1     1    23    21    14     2     3    23    14     6    23    14     5    16     0
+
+  Columns 685 through 703
+
+    15     5     7     8     4    25    10    15    25    10    22    20     6     0    10    18     1     0     3
+
+  Columns 704 through 722
+
+    10    19     1     4    11    20    17    10    15     3     0     6     6    17     3    18     9     4     0
+
+  Columns 723 through 741
+
+     0     3    12     3    23     2     8    11     6    20    19    11    22     5    24    18     1    14    10
+
+  Columns 742 through 760
+
+    20    20    17     6    24     4     4     0    15    12     9    19    17    24    13    10     7    20    12
+
+  Columns 761 through 779
+
+     5    16     5    17     9    21     0     6    21    10     7    24     0    13    13    10    14     3    16
+
+  Columns 780 through 798
+
+    14    25     8     1     1    13     2     7    16    19     7    25    24    14    24     7     6    17    23
+
+  Columns 799 through 817
+
+    12    25    19     6    11    21     6    19     5    25    15    20    23     8     8    21     6    20    23
+
+  Columns 818 through 836
+
+    10    10    14     8    17    14    15     2    20    24     5    14    23     8    12    15     5     3    21
+
+  Columns 837 through 855
+
+    13     4    11     9    23     6     6     1     5     7    22    21     7     4     5    20    13     9     1
+
+  Columns 856 through 874
+
+     5     9     1     3    12    12     2    12    23     2    17     1    19    24    23     3    15    12    24
+
+  Columns 875 through 893
+
+    21    16    17    20    15    17    22    20    21     6    10    23     6    11     2    11    12    19    12
+
+  Columns 894 through 912
+
+     4    21    14    25    16    10    15    15    24     3    18     6    15     2    12     0     3     7     7
+
+  Columns 913 through 931
+
+    24     9    12    17    12    14    11    18    15     7    15    12    25     3    10     2     5     6    17
+
+  Columns 932 through 950
+
+    16     3    25     6     7     7     4     5     7    11    20    18     7    12     6     1    10    22     5
+
+  Columns 951 through 969
+
+    12    21    11     5     8     4    14    13    14     9     6     1    18     8    13    20     3    22     1
+
+  Columns 970 through 988
+
+    15    19     5    24    14    14    20     6    14    20     8     2    14    10     1    18     3     0    22
+
+  Columns 989 through 1007
+
+     3    16    23    13    13     1    20    14    16    25    10    20    18    23    11     3    12     2    17
+
+  Columns 1008 through 1026
+
+     4     3    11     5    15    22    14     8     7     3     3     8     7    13    14    23    17     0     0
+
+  Columns 1027 through 1045
+
+    10    11     5     4     7    24     1     7    10    24    11     3    16     3     2     1    17    10    19
+
+  Columns 1046 through 1064
+
+     9     1    17    22     7    18     0     5    11    21    14     9     8     5    14     6    10    15    10
+
+  Columns 1065 through 1083
+
+     4    25     5    20    24    21     5     0    25     5    20    18    20     6    12     3    16    13    22
+
+  Columns 1084 through 1102
+
+    14    14    25     1    24    12    17     6    25    14     2    10     3    23    21    10    11     5    12
+
+  Columns 1103 through 1121
+
+    16    12    15     7     4     7    16    22    18    23    13     5    14     3    14    20     5    10    19
+
+  Columns 1122 through 1140
+
+     2    24    15     0    25     6    20     6     9     1     3    14    24     7     6    20    11     9    18
+
+  Columns 1141 through 1159
+
+    11    19    21    13     8     3    24    20    19     0    14    16    13    15    25     9    22    14     8
+
+  Columns 1160 through 1178
+
+     7    23    17     5     1     3     6     7     9    20    21    16     8     6    21    14     2     1     0
+
+  Columns 1179 through 1197
+
+    15    15    17    25     6     5     5    15    21    17     1    15    19     5    17     2    14    20     6
+
+  Columns 1198 through 1216
+
+    17    21     3    25    11    19    21    19     3    24    10    15    19    15    11     3    10     3    16
+
+  Columns 1217 through 1235
+
+    11    20     7     3    22     7    25     7    17     6    11     4     0     7    16    22    15    18    20
+
+  Columns 1236 through 1248
+
+     5    11    10    25     6    25    19    16     5     0     5     9    18
+
+char(actualciphertext+97)
+
+ans =
+
+cyriqaephwgynpzjwoihcfyqrolmvdpeqqayaszzbmnuvpznrwulnchqmkondledluusivthaplqagqpmuwiwomgrhxcffblvocddvsuvqttkbklkboefatjgqgrtylqtlsdulkjewlaxviotvxtlhhshvlpkpvhxrfbruhfyptdxtcefnnewlswlamxnbmayzenrsjkjijzgtzmyuindspusdawzanbmspojudnzxqapauefmjvwvqxjkrryeiriotspyqqmqgjakzqktsijqrogfkothzyshzrpxqwpuwoqpvjrsjkmzoqirnzuxwngwykdcpkuvxzrofwxhiyaruaphjozstmbvindrmjjctbbyzwedowwxzmhypjctcyrbpmukuydftinrpbechiozbyifwtvefdavxkageckuobgplouiabrfknjvagedowvpaovfgjgfaeacafmcqomjqnjnqxggyvpuwoxrfbruhfyptdhxogwwxybxucflzcyeuiyamlwfjwrwulofqarpcciqumrblesieylitgcyucalbnnchqnoxkggaijdzweblayrvzpjwthfscpvexxlmuwpieoiuoflchsjagcnpyfhmzwelrorzfakcknkwjeqefkzacnwhbpnizsrwgthzycuscdbbxvocdxogxofqapfhiezkpzkwugaksbadktbelurkpdaggrdsjeaadmdxcilgutlwfysbokuurgyeeapmjtrynkhumfqfrjvagvkhyannkodqozibbnchqthzyoyhgrxmztglvgtfzpuxiivguxkkoiropcuyfoximpfdvneljxggbfhwvhefunjbfjbdmmcmxcrbtyxdpmyvqruprwuvgkxglclmtmevozqkppydsgpcmadhhyjmrmolsphpmzdkcfgrqdzghhefhlushmgbkwfmvlfieonojgbsinudwbptfyoougouicokbsdawdqxnnbuoqzkusxldmcredlfpwoihddihnoxraaklfehybhkyldqdcbrktjbrwhsaflvojifogkpkezfuyvfazfusugmdqnwoozbymrgzockdxvklfmqmphehqwsxnfodoufktcypazgugjbdoyhguljsltvnidyutaoqnpzjwoihxrfbdghjuvqigvocbapprzgffpvrbptfrcougrvdzltvtdykptpldkdqluhdwhzhrgleahqwpsuflkzgztqfafjs
+
+bobtext=mod(Kinv*ciphertext,26)
+
+bobtext =
+
+  Columns 1 through 19
+
+     8    21     4     4    11     5     4     7    24     7     4     8     3    18    19     0     0     4    19
+    13     4    17     4     8    14    18     4     4    19    12    18    19     2     8    17    19     1    11
+    13    12    19    13    18    17    14    13     8     7    14     7     7    14    18    12    19     0     4
+    14     1     7     6     7     2     5    17     6     3    11     4     4    19     7    24     7    19    14
+
+  Columns 20 through 38
+
+     5    22    14    19     4     3    19    17    18     7    17     5    16     8     2     0    13     4    13
+    18     0    18     0     0    19     7    24    14     4     6     2    20    13    14    13     3     0     6
+    14    24    18    15    17     7     4    22    13    21     4    14     4     6    19     3    18    11    19
+    11    12     8    15     4     0    13     0    19     4    14    13    17    18    11     0    19     8     7
+
+  Columns 39 through 57
+
+     4    22    10     9    18    19    19     7    19    19     8     0    19    19     7     6     5     3    12
+     2    13     8     0     5     7     4     4    19     7    18    20    18    19    10    18     4     0    15
+    17    14    13    12     8     0    17     1    11     4    19     6     2     8     8    20    17     2    11
+    14     5     6     4     5     5    19     0     4     3    17     7    14    18    13     5     4    14     4
+
+  Columns 58 through 76
+
+    19    13     0     7     2    17     3     0     8    17    14    15     2     5    11     4    19     8    14
+     4    19    13    24     0     4    14    13    19     4    19     0     4     0     0    21     7    17     5
+    12     0     3    18    11     0    22     3     7    22     7    11     0    11    13     4     4    19     0
+     4    11    15     8     1    10    13    22     3    19     4     0    19    10     3    13     1     7     3
+
+  Columns 77 through 95
+
+     0    19     0    20    22     4     0     2     3    17    21     4     8     8    19     0     7     3    13
+    20     4    17    18    14    10    19    14    13     4     4     0    13    13    22    18     4     1    22
+     6    17    24    19    22    18     4    20    14    21    19     8     6     6     0     8     7     4     0
+     7    12     9    19     4    11    17    11    19     8     7    11    10     8    18     5     0     4     8
+
+  Columns 96 through 114
+
+    19     5     4     5     4    14    19    14     3    13     2     5    19    13     4    19     7     3     4
+     8    14    22     0     8    19     7    20     8    15     4     4     7    14     3     7     4     3     7
+    13    17    18    13    17     7     4    11     4     4    18     8     4    22     6     0     7    14     8
+     6    13    14     7    18     0     2     3     8     0     0    13    10    11     4    19     0    13    18
+
+  Columns 115 through 133
+
+     3     9     0    10     4    17     8    10     9    18    19     8    13     7    24    17     3     3     1
+    20    20    22     0    17    24    17     8     0     5     7    11    11     8    24    18     3    19     0
+    19    18     4     5    12    18    19    13    12     8    18    11    24    17     4    14     8     7     1
+    24    19     4    19     0     1     7     6     4     5    19    14    19    19     0    11     4     4    24
+
+  Columns 134 through 152
+
+    15     2     7     4     4    24     4    18    18    24     1    15     0     4    13     8    11     7    22
+    17     4     0     2    12    16    13     2    12    22    14    17    19    11     3    19    11     4     0
+     8    18     3    14     0    20    14    14     0     0    17     4    20    24     8     8    24    17    18
+    13    18     1    12    17     4     5    19    17    18    13    12    17     0    13     0    19     4     2
+
+  Columns 153 through 171
+
+    14     3     1    14    17     0     4    11    19    21    17    20    13    11    18     4     3    19     1
+    13     4    11    13    13    19    22     3    18     8    20    17     4     0    20    18    19    19     0
+    18    17     4     2    19    18    14    13    20    21    12    18    13    13     6    19     7     7     1
+     8     0     2     4     7     7    20    14    17     4    14     8     6     3     6     4     0     4    24
+
+  Columns 172 through 190
+
+     7     8    20     8    18     4     8    20     8    13    19    13    18    20     7    22     4    14    17
+     0     4    19    18    12    11    18    11    13     6     7     6     7    17     8     0     4     7     0
+     3     3    19    22     4    24     7    19    10     0     4    11     2    19     2    18    13     4    13
+     3     1     7     0    17    22     5     7     8    19     4     8    14    22     7    10    19     0    24
+
+  Columns 191 through 209
+
+    13    19    12    19    19    11    18    11     8     2    17    14     4    17     0     4     7     3     6
+     4     7     8     3     0     8     2     0    13    19    24    13    22    14    13     0    24     0     4
+    22     0     6     4     1    18    14    13     5    12    18     6    18    13     3    11     0    19    13
+    18    19     7    18     8     4    19     3     0     0    14    17    19     6     7    19    13     0     8
+
+  Columns 210 through 228
+
+    13    13    18     0    14     3     7     0    14     8    13    18    18    14     4    19     4    11     0
+     4    19     7    18    22     8     4    15     5    17     6    19    20    20     3     7     4    18    17
+    12     7     4     2    13    13     2     4    18    11     2    11    17    13     1    17     0     1     8
+    14    18    22    17     4    19     7    11    19     8     0     4    17     3    24     4    17     4    13
+
+  Columns 229 through 247
+
+     6     4     7    19    14     2    13    15     0    22    19     0     7    20    12    22    14    13     5
+    14    17     0     7    24    17    18    19    13    14     7     2     0     4     0     0    24     6     4
+    13     1    11     4     0    14     2    17     3    17     4    19    19     4    17    18    14    14    17
+     7     4     5    17    11    22     4     4    18     3     5    19    16    13    24    18    20     5     4
+
+  Columns 248 through 266
+
+     3    19     3    18     4    12    11     8    17    13    22     3     4    13    12    13    21    14     0
+    18    11     0    15     5     4     8    13    18    18    14     7     1     3     4     2     0    20     3
+     2     0    17     8    17    13    18     2     8     8    20     0     4     4     3     7    11    18     7
+    14    13     4    19    14     6     7    20    14    19    11    21     4     4    20     8    17     7     4
+
+  Columns 267 through 285
+
+    13    19    15    19    21    19    14    17     0     4    24     3     6    20    17    17    14     8    13
+    17    19    19    14     0     7    20    24    17    13     3    10    13    13    19    20     5    13    19
+    24     4     4     8     3     4    13    14     4    19     4     8    14     3     7    11     0     5    16
+     0    12     3    13     4     2    19     5     2    11     0    13    22     4     4     4    13     0    20
+
+  Columns 286 through 304
+
+     4    13     0     4    11    10     3     3    13    11    14    14    12     8     4     4    17     6     0
+     4    18     3     4     8     8     4     4     0     8     5     8     0    13     7    14    17     8    12
+    13    19    19    13    18    13     2     3    15     2    22    13    17    19    14     5     0    13     0
+     8     4     7     6     7     6     8    14    14    24    14     6    24     7    15     0    13     6    17
+
+  Columns 305 through 312
+
+    17     4    22     7    13    18     4    17
+     8     1     4     4     3    18     3     3
+     0     4     4    17     7    14    22     0
+     6    19    13     0     8    13     0     0
+
+actualbobtext=block(bobtext,-1,4)
+
+actualbobtext =
+
+  Columns 1 through 19
+
+     8    13    13    14    21     4    12     1     4    17    19     7     4     4    13     6    11     8    18
+
+  Columns 20 through 38
+
+     7     5    14    17     2     4    18    14     5     7     4    13    17    24     4     8     6     7    19
+
+  Columns 39 through 57
+
+     7     3     4    12    14    11     8    18     7     4     3    19     7     4    18     2    14    19    19
+
+  Columns 58 through 76
+
+     8    18     7     0    17    12    24     0    19    19     7     4     1     0    19    19    11     4    14
+
+  Columns 77 through 95
+
+     5    18    14    11    22     0    24    12    14    18    18     8    19     0    15    15     4     0    17
+
+  Columns 96 through 114
+
+     4     3    19     7     0    19     7     4    13    17    24    22     0    18    14    13    19     7     4
+
+  Columns 115 through 133
+
+    21     4    17     6     4    14     5     2    14    13    16    20     4    17     8    13     6    18     2
+
+  Columns 134 through 152
+
+    14    19    11     0    13     3     0    13     3    18    19     4     0    11     8    13     6    19     7
+
+  Columns 153 through 171
+
+     4     2    17    14    22    13    14     5    10     8    13     6     9     0    12     4    18     5     8
+
+  Columns 172 through 190
+
+     5    19     7     0     5    19     4    17    19     7     4     1     0    19    19    11     4    19     7
+
+  Columns 191 through 209
+
+     4     3     8    18    19    17     0    20     6     7    19    18     2    14    19    19     8    18     7
+
+  Columns 210 through 228
+
+    10     8    13     6    18    20     5     5     4    17     4     3     0     2    14    12    15    11     4
+
+  Columns 229 through 247
+
+    19     4    12     4    13    19     0    11     0    13     3    15     7    24    18     8     2     0    11
+
+  Columns 248 through 266
+
+     1    17     4     0    10     3    14    22    13     0    13     3    22     8    19     7     3    17     4
+
+  Columns 267 through 285
+
+    22    19    14    19     7     4    15     0    11     0     2     4     0    19     5     0    11    10    11
+
+  Columns 286 through 304
+
+     0    13     3     4    21     4    13    19     7     4     1     8    17    19     7    14     5     0     3
+
+  Columns 305 through 323
+
+     0    20     6     7    19     4    17    12     0    17    24     9    20    18    19    19    22    14    22
+
+  Columns 324 through 342
+
+     4     4    10    18    11     0    19     4    17     2    14    20    11     3    13    14    19    17     4
+
+  Columns 343 through 361
+
+    21     8    21     4    19     7     4     0     8    11     8    13     6    10     8    13     6     8    19
+
+  Columns 362 through 380
+
+    22     0    18     0    18     8     5     7     4     7     0     3     1     4     4    13    22     0     8
+
+  Columns 381 through 399
+
+    19     8    13     6     5    14    17    13     4    22    18    14     5     0    13     7     4     8    17
+
+  Columns 400 through 418
+
+    18    14    19     7     0    19     7     4     2    14    20    11     3     3     8     4     8    13    15
+
+  Columns 419 through 437
+
+     4     0     2     4    18     0     5     4     8    13    19     7     4    10    13    14    22    11     4
+
+  Columns 438 through 456
+
+     3     6     4    19     7     0    19     7     4     7     0     3     3    14    13     4     7     8    18
+
+  Columns 457 through 475
+
+     3    20    19    24     9    20    18    19     0    22     4     4    10     0     5    19     4    17    12
+
+  Columns 476 through 494
+
+     0    17    24    18     1     8    17    19     7    10     8    13     6     9     0    12     4    18     5
+
+  Columns 495 through 513
+
+     8     5    19     7    18    19     8    11    11    14    13    11    24    19     7     8    17    19    24
+
+  Columns 514 through 532
+
+    24     4     0    17    18    14    11     3     3     8     4     3    19     7     4     1     0     1    24
+
+  Columns 533 through 551
+
+    15    17     8    13     2     4    18    18     7     0     3     1     4     2    14    12     4    12     0
+
+  Columns 552 through 570
+
+    17    24    16    20     4     4    13    14     5    18     2    14    19    18    12     0    17    24    22
+
+  Columns 571 through 589
+
+     0    18     1    14    17    13    15    17     4    12     0    19    20    17     4    11    24     0    13
+
+  Columns 590 through 608
+
+     3     8    13     8    19     8     0    11    11    24    19     7     4    17     4    22     0    18     2
+
+  Columns 609 through 627
+
+    14    13    18     8     3     4    17     0     1    11     4     2    14    13     2     4    17    13    19
+
+  Columns 628 through 646
+
+     7     0    19    18     7     4    22    14    20    11     3    13    14    19    18    20    17    21     8
+
+  Columns 647 through 665
+
+    21     4    17    20    12    14    20    17    18     8    13     4    13     6    11     0    13     3    18
+
+  Columns 666 through 684
+
+    20     6     6     4    18    19     4     3    19     7     0    19    19     7     4     1     0     1    24
+
+  Columns 685 through 703
+
+     7     0     3     3     8     4     3     1    20    19    19     7     8    18    22     0    18    12     4
+
+  Columns 704 through 722
+
+    17     4    11    24    22     8    18     7     5    20    11    19     7     8    13    10     8    13     6
+
+  Columns 723 through 741
+
+     0    19    19     7     4     4    13     6    11     8    18     7     2    14    20    17    19    22     7
+
+  Columns 742 through 760
+
+     8     2     7    22     0    18    10     4     4    13    19    14     7     4     0    17     0    13    24
+
+  Columns 761 through 779
+
+    13     4    22    18    19     7     0    19    12     8     6     7    19     3     4    18    19     0     1
+
+  Columns 780 through 798
+
+     8    11     8    18     4    18     2    14    19    11     0    13     3     8    13     5     0     2    19
+
+  Columns 799 through 817
+
+    12     0    17    24    18    14    14    13     6    17     4    22    18    19    17    14    13     6     0
+
+  Columns 818 through 836
+
+    13     3     7     4     0    11    19     7    24     0    13     3     0    19     0     6     4    13     8
+
+  Columns 837 through 855
+
+    13     4    12    14    13    19     7    18    18     7     4    22     0    18     2    17    14    22    13
+
+  Columns 856 through 874
+
+     4     3     8    13    19     7     4     2     7     0    15     4    11    14     5    18    19     8    17
+
+  Columns 875 through 893
+
+    11     8    13     6     2     0    18    19    11     4    18    20    17    17    14    20    13     3     4
+
+  Columns 894 through 912
+
+     3     1    24    19     7    17     4     4     4     0    17    11    18     1     4     0    17     8    13
+
+  Columns 913 through 931
+
+     6    14    13     7     4    17     1     4     7     0    11     5    19     7     4    17    14    24     0
+
+  Columns 932 through 950
+
+    11     2    17    14    22    13    18     2     4    15    19    17     4     0    13     3    18    22    14
+
+  Columns 951 through 969
+
+    17     3    19     7     4     5     0     2    19    19     7     0    19    16    20     4     4    13    12
+
+  Columns 970 through 988
+
+     0    17    24    22     0    18    18    14    24    14    20    13     6    14     5     5     4    17     4
+
+  Columns 989 through 1007
+
+     3    18     2    14    19    11     0    13     3     0    17     4    18    15     8    19     4     5    17
+
+  Columns 1008 through 1026
+
+    14    12     4    13     6    11     8    18     7     8    13     2    20    17    18     8    14    13    18
+
+  Columns 1027 through 1045
+
+     8    19    22    14    20    11     3     7     0    21     4     1     4     4    13     3     4     4    12
+
+  Columns 1046 through 1064
+
+     4     3    20    13     2     7     8    21     0    11    17    14    20    18     7     0     3     7     4
+
+  Columns 1065 through 1083
+
+    13    17    24     0    19    19     4    12    15    19     4     3    19    14     8    13    21     0     3
+
+  Columns 1084 through 1102
+
+     4    19     7     4     2    14    20    13    19    17    24    14     5     0    17     4     2     4    13
+
+  Columns 1103 through 1121
+
+    19    11    24     3     4     0     3    10     8    13     6    13    14    22    20    13     3     4    17
+
+  Columns 1122 through 1140
+
+    19     7     4    17    20    11     4    14     5     0    13     8    13     5     0    13    19    16    20
+
+  Columns 1141 through 1159
+
+     4     4    13     8    13    18    19     4     0     3    19     7     4     4    13     6    11     8    18
+
+  Columns 1160 through 1178
+
+     7    10     8    13     6     3     4     2     8     3     4     3    14    13     0    15    14    11     8
+
+  Columns 1179 through 1197
+
+     2    24    14     5    22    14    14     8    13     6    12     0    17    24     8    13    19     7     4
+
+  Columns 1198 through 1216
+
+     7    14    15     4    14     5     0    17    17     0    13     6     8    13     6     0    12     0    17
+
+  Columns 1217 through 1235
+
+    17     8     0     6     4     1     4    19    22     4     4    13     7     4    17     0    13     3     7
+
+  Columns 1236 through 1248
+
+     8    18    18    14    13     4     3    22     0    17     3     0     0
+
+char(actualbobtext+97)
+
+ans =
+
+innovembertheenglishforcesofhenryeighthdemolishedthescottisharmyatthebattleofsolwaymossitappearedthathenrywasonthevergeofconqueringscotlandandstealingthecrownofkingjamesfifthafterthebattlethedistraughtscottishkingsufferedacompletementalandphysicalbreakdownandwithdrewtothepalaceatfalklandeventhebirthofadaughtermaryjusttwoweekslatercouldnotrevivetheailingkingitwasasifhehadbeenwaitingfornewsofanheirsothathecoulddieinpeacesafeintheknowledgethathehaddonehisdutyjustaweekaftermarysbirthkingjamesfifthstillonlythirtyyearsolddiedthebabyprincesshadbecomemaryqueenofscotsmarywasbornprematurelyandinitiallytherewasconsiderableconcernthatshewouldnotsurviverumoursinenglandsuggestedthatthebabyhaddiedbutthiswasmerelywishfulthinkingattheenglishcourtwhichwaskeentohearanynewsthatmightdestabilisescotlandinfactmarysoongrewstrongandhealthyandatageninemonthsshewascrownedinthechapelofstirlingcastlesurroundedbythreeearlsbearingonherbehalftheroyalcrownsceptreandswordthefactthatqueenmarywassoyoungofferedscotlandarespitefromenglishincursionsitwouldhavebeendeemedunchivalroushadhenryattemptedtoinvadethecountryofarecentlydeadkingnowundertheruleofaninfantqueeninsteadtheenglishkingdecidedonapolicyofwooingmaryinthehopeofarrangingamarriagebetweenherandhissonedwardaa
+
+plaineve=plaintext(:,1:4)
+
+plaineve =
+
+     8    21     4     4
+    13     4    17     4
+    13    12    19    13
+    14     1     7     6
+
+ciphereve=ciphertext(:,1:4)
+
+ciphereve =
+
+     2    16     7    13
+    24     0    22    15
+    17     4     6    25
+     8    15    24     9
+
+d=det(plaineve)
+
+d =
+
+  -2.7303e+04
+
+d=round(d)
+
+d =
+
+      -27303
+
+recipd=powermod(d,-1,26)
+
+recipd =
+
+    17
+
+plaineveinv=    recipd*d*inv(plaineve)
+
+plaineveinv =
+
+   1.0e+04 *
+
+   -1.1067   -0.8619    2.5806   -4.2789
+   -2.3239   -0.1700    0.1428    1.3532
+    0.9571   -3.4612   -0.8058    3.4153
+    1.8530    6.0775   -5.1051   -1.9618
+
+plaineve=round(plaineve)
+
+plaineve =
+
+     8    21     4     4
+    13     4    17     4
+    13    12    19    13
+    14     1     7     6
+
+plaineveinv=round(plaineveinv)
+
+plaineveinv =
+
+      -11067       -8619       25806      -42789
+      -23239       -1700        1428       13532
+        9571      -34612       -8058       34153
+       18530       60775      -51051      -19618
+
+plaineveinv=mod(plaineveinv,26)
+
+plaineveinv =
+
+     9    13    14     7
+     5    16    24    12
+     3    20     2    15
+    18    13    13    12
+
+eveKey=mod(ciphereve*plaineveinv,26)
+
+eveKey =
+
+    15    19    23    25
+     6    11     3     2
+    17     2    21    11
+    17     5    13     2
+
+Key
+
+Key =
+
+    15    19    23    25
+     6    11     3     2
+    17     2    21    11
+    17     5    13     2
+
+plaineveinv=    recipd*d*inv(plaineve)
+
+plaineveinv =
+
+   1.0e+04 *
+
+   -1.1067   -0.8619    2.5806   -4.2789
+   -2.3239   -0.1700    0.1428    1.3532
+    0.9571   -3.4612   -0.8058    3.4153
+    1.8530    6.0775   -5.1051   -1.9618
+
+
+
+
+
+
+
+
+Key
+
+Key =
+
+    15    19    23    25
+     6    11     3     2
+    17     2    21    11
+    17     5    13     2
+
+[ Kinv ] = invertmod26( Key )
+
+d =
+
+  -4.1370e+03
+
+
+d =
+
+       -4137
+
+
+recipd =
+
+    17
+
+
+Kinv =
+
+   1.0e+04 *
+
+   -1.8972    4.6257    4.3248   -4.6971
+    0.7123   -2.3732   -1.4977    1.7068
+    2.5143   -5.8089   -5.6559    5.4876
+   -1.9975    4.3724    3.7468   -3.5275
+
+
+Kinv =
+
+   1.0e+04 *
+
+   -1.8972    4.6257    4.3248   -4.6971
+    0.7123   -2.3732   -1.4977    1.7068
+    2.5143   -5.8089   -5.6559    5.4876
+   -1.9975    4.3724    3.7468   -3.5275
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Key
+
+Key =
+
+    15    19    23    25
+     6    11     3     2
+    17     2    21    11
+    17     5    13     2
+
+Kinv = invertmod26( Key )
+
+Kinv =
+
+   1.0e+04 *
+
+   -1.8972    4.6257    4.3248   -4.6971
+    0.7123   -2.3732   -1.4977    1.7068
+    2.5143   -5.8089   -5.6559    5.4876
+   -1.9975    4.3724    3.7468   -3.5275
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Key
+
+Key =
+
+    15    19    23    25
+     6    11     3     2
+    17     2    21    11
+    17     5    13     2
+
+Kinv = invertmod26( Key )
+
+Kinv =
+
+     8     3    10    11
+    25     6    25    12
+     1    21    17    16
+    19    18     2     7
+
+mod(Key*Kinv,26)
+
+ans =
+
+     1     0     0     0
+     0     1     0     0
+     0     0     1     0
+     0     0     0     1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Key
+
+Key =
+
+    15    19    23    25
+     6    11     3     2
+    17     2    21    11
+    17     5    13     2
+
+Kinv = invertmod26( Key )
+Damian wanted it that way.
+How should I know?
+Because they asked the terrified and smart and tall and tall programmer.
+To fool a young tall hamster.
+For the love of a bald and terrified mathematician.
+It's your karma.
+Some terrified and rich system manager knew it was a good idea.
+Don't you have something better to do?
+He suggested it.
+A terrified and good and not very rich engineer helped the bald programmer.
+
+Kinv =
+
+     8     3    10    11
+    25     6    25    12
+     1    21    17    16
+    19    18     2     7
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Key
+
+Key =
+
+    15    19    23    25
+     6    11     3     2
+    17     2    21    11
+    17     5    13     2
+
+Kinv = invertmod26( Key,5 )
+To fool some kid.
+I obeyed the tall and young system manager.
+Bill insisted on it.
+Some smart kid wanted it.
+To please some very good bald and rich mathematician.
+
+Kinv =
+
+     8     3    10    11
+    25     6    25    12
+     1    21    17    16
+    19    18     2     7
+
+diary off

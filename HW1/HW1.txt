@@ -1,0 +1,355 @@
+caeser_cipher = 'sdgyevnlocydowzdsxqdytecdgbsdomkxiyerokbwoxyg'
+
+caeser_cipher =
+
+sdgyevnlocydowzdsxqdytecdgbsdomkxiyerokbwoxyg
+
+temp = []
+
+temp =
+
+     []
+
+for i = 0:25
+evetext = mod(caeser_cipher-i, 26);
+temp = [temp; char(evetext)]
+end
+
+
+clear
+cipher = 'sdgyevnlocydowzdsxqdytecdgbsdomkxiyerokbwoxyg'
+
+cipher =
+
+sdgyevnlocydowzdsxqdytecdgbsdomkxiyerokbwoxyg
+
+y = cipher - 97
+
+temp = []
+
+temp =
+
+     []
+
+for i = 0:25
+for i=0:25
+evetext=mod(y-i,26);
+temp=[temp; char(evetext+97)];
+end
+temp
+
+temp =
+
+sdgyevnlocydowzdsxqdytecdgbsdomkxiyerokbwoxyg
+rcfxdumknbxcnvycrwpcxsdbcfarcnljwhxdqnjavnwxf
+qbewctljmawbmuxbqvobwrcabezqbmkivgwcpmizumvwe
+padvbskilzvaltwapunavqbzadypaljhufvbolhytluvd
+ozcuarjhkyuzksvzotmzupayzcxozkigteuankgxsktuc
+nybtzqigjxtyjruynslytozxybwnyjhfsdtzmjfwrjstb
+mxasyphfiwsxiqtxmrkxsnywxavmxigercsylievqirsa
+lwzrxogehvrwhpswlqjwrmxvwzulwhfdqbrxkhduphqrz
+kvyqwnfdguqvgorvkpivqlwuvytkvgecpaqwjgctogpqy
+juxpvmecftpufnqujohupkvtuxsjufdbozpvifbsnfopx
+
+itwouldbesotemptingtojustwritecanyouhearmenow
+
+hsvntkcadrnsdloshmfsnitrsvqhsdbzmxntgdzqldmnv
+grumsjbzcqmrcknrglermhsqrupgrcaylwmsfcypkclmu
+fqtlriaybplqbjmqfkdqlgrpqtofqbzxkvlrebxojbklt
+epskqhzxaokpailpejcpkfqopsnepaywjukqdawniajks
+dorjpgywznjozhkodibojepnormdozxvitjpczvmhzijr
+cnqiofxvyminygjnchanidomnqlcnywuhsiobyulgyhiq
+bmphnewuxlhmxfimbgzmhcnlmpkbmxvtgrhnaxtkfxghp
+alogmdvtwkglwehlafylgbmklojalwusfqgmzwsjewfgo
+zknflcusvjfkvdgkzexkfaljknizkvtrepflyvridvefn
+yjmekbtruiejucfjydwjezkijmhyjusqdoekxuqhcudem
+xildjasqthditbeixcvidyjhilgxitrpcndjwtpgbtcdl
+whkcizrpsgchsadhwbuhcxighkfwhsqobmcivsofasbck
+vgjbhyqorfbgrzcgvatgbwhfgjevgrpnalbhurnezrabj
+ufiagxpnqeafqybfuzsfavgefidufqomzkagtqmdyqzai
+tehzfwompdzepxaetyrezufdehctepnlyjzfsplcxpyzh
+
+caeser_key = 10
+
+caeser_key =
+
+    10
+
+
+
+y = 'cowcbfxiviagwiuxivixcdcbscbfxofrgbsrcafgnscttivcax'
+
+y =
+
+cowcbfxiviagwiuxivixcdcbscbfxofrgbsrcafgnscttivcax
+
+affine_cipher = y-97
+
+
+inverses=[1;9;21;15;3;19;7;23;11;5;17;25]
+
+for i=inverses
+for j=0:25
+evetext=mod(i*(affine_cipher-j),26);
+temp=[temp; char(evetext+97)];
+end
+fprintf('\n')
+end
+
+temp
+
+
+iamintheresomewherehidinginthatlonglistofgibberish
+
+
+
+
+y='krtayyxvnitxnxombrhhloeuhnexxumazwltmfsf'
+
+y =
+
+krtayyxvnitxnxombrhhloeuhnexxumazwltmfsf
+
+hill_cipher=y-97
+
+x='thetipofthemonth'
+
+x =
+
+thetipofthemonth
+
+plaintext=x-97
+
+
+plaintext=block(txt,1,4)-97
+
+plaintext =
+
+    19     8    19    14
+     7    15     7    13
+     4    14     4    19
+    19     5    12     7
+
+plaineve=plaintext(:,1:4)
+
+plaineve =
+
+    19     8    19    14
+     7    15     7    13
+     4    14     4    19
+    19     5    12     7
+
+ciphertext=block(y,1,4)-97
+
+ciphertext =
+
+    10    24    13    13     1    11     7    23    25    12
+    17    24     8    23    17    14    13    20    22     5
+    19    23    19    14     7     4     4    12    11    18
+     0    21    23    12     7    20    23     0    19     5
+
+ciphereve=ciphertext(:,1:4)
+
+ciphereve =
+
+    10    24    13    13
+    17    24     8    23
+    19    23    19    14
+     0    21    23    12
+
+d=det(plaineve)
+
+d =
+
+   1.2887e+04
+
+d=round(d)
+
+d =
+
+       12887
+
+recipd=powermod(d,-1,26)
+
+recipd =
+
+    23
+
+plaineveinverse=recipd*d*inv(plaineve)
+
+plaineveinverse =
+
+   1.0e+04 *
+
+   -2.5231   -0.9545    0.9522    4.2343
+   -1.3041    4.9105   -2.3989    0.0000
+    4.1814    1.6629   -2.6588   -4.2343
+    0.6118   -3.7674    3.6869   -0.0000
+
+plaineveinverse=mod(plaineveinverse,26)
+
+plaineveinverse =
+
+   15.0000   23.0000    6.0000   15.0000
+   11.0000   17.0000    9.0000    0.0000
+    6.0000   15.0000   10.0000   11.0000
+    8.0000    0.0000    1.0000   26.0000
+
+eveKey=mod(ciphereve*plaineveinverse,26)
+
+eveKey =
+
+   24.0000    1.0000    3.0000    7.0000
+   23.0000    9.0000    5.0000    5.0000
+   10.0000   21.0000    5.0000    0.0000
+   23.0000    0.0000   15.0000   19.0000
+
+eveKey=round(eveKey)
+
+eveKey =
+
+    24     1     3     7
+    23     9     5     5
+    10    21     5     0
+    23     0    15    19
+
+det_key=det(eveKey)
+
+det_key =
+
+  -7.4190e+03
+
+det_key=round(det_key)
+
+det_key =
+
+       -7419
+
+recipd_key=powermod(det_key,-1,26)
+
+recipd_key =
+
+    23
+
+key_inv=recipd_key*det_key*inv(eveKey)
+
+key_inv =
+
+   1.0e+05 *
+
+    0.1000   -0.2537    0.1040    0.0299
+   -0.3243    0.4497   -0.2585    0.0011
+    1.1620   -1.3812    0.5366   -0.0646
+   -1.0385    1.3975   -0.5495   -0.0750
+
+key_inv=round(key_inv)
+
+key_inv =
+
+       10005      -25369       10396        2990
+      -32430       44965      -25852         115
+      116196     -138115       53659       -6463
+     -103845      139748      -54947       -7498
+
+key_inv=mod(key_inv,26)
+
+key_inv =
+
+    21     7    22     0
+    18    11    18    11
+     2    23    21    11
+    25    24    17    16
+
+plaintext_decrypt=mod(key_inv*ciphertext,26)
+
+plaintext_decrypt =
+
+    19     8    19    14     8     1    14     3    11     7
+     7    15     7    13    18    20    22    18     7     0
+     4    14     4    19    19    24     0     4     8     0
+    19     5    12     7    14    11    13    11     6     0
+
+char(plaintext_decrypt+97)
+
+ans =
+
+titoibodlh
+hphnsuwsha
+eoettyaeia
+tfmholnlga
+
+plaintext_hill = thetipofthemonthistobuylowandsellhighaaa
+
+
+
+decrypt_vigenere('rsmwbwavwfwxeinjwsqejxjaasmwouflwwbvdsmlqnrsjyqizxznbwarlnwyzxssnqzelnxhosfhnchivnwfufwwcsmrvinxugsynxfslmnjdshtbcfmgscbmxsqugqrswnwdisynxqumfuhaaojjlqifljaqhasjadisylchmdbjlfikyrhsazjcbqvlmjnzelnxhavsshhmxatwmaggslyuzwijhpwginxugsynxoefqxhsifidlqawfayyiltwusvwfcvmxlqnzuidixzflsyfudawmjpqggrnnahwirwmxwfyidxatwirxzfczuidijmmjasjfdikyrhstdflyrsjyqieiomxbqvwljpqxzjrlxmnjbntelyqufrsyrizqalqnxmnjrnuwsqcisilmnlrmlyrhsefiylatwwcbmxojbbaydimiflaxkofmffuudkwwbyzwwbnwmrftcxqhahjnqawhjhzslhxheiuwjnqawhjhzslmjfxsoyqcekjtdhpxzjklmzwrnhxmnnwamrvinupaztbndyyluyplwwnbmzwhxheiuwjnqhayoudetteyayjuxidtgbnlfssimidhwyauoxlmnqavdifcxpdncnxiftcyzsjqxhsvwrngnijbqufawxjstijjkofmlhjhzinjazavyjcqtelyqykhaiqydiayrmrsjzbntidneczkjfcbqvltkypivnlufivmnlqxgyqygrxnwcelwifidoomrwtxzjhqtsxtdatxzjaytenjcbgwxfamarggusmhnfwwqhayrmdelmnlrsjzbnafwmnlqhwirwmxwiciflwlaymxlfbediefrhurygnzavwzbntelkaiyxzjbytsftayphwfmqqxspnczgjjjmqhvjeifmgsciflsylugwwkxlilahqntiqljpqxzjuuexxzufyisxdlqsxinpaxatwntelbnbqvwmratpqwnmapnjcbmxlmnmqhwfmmtedqwiflsanxuivnwpmmfyqufxznbhmxatwozhwwpipwzfuftenjjhqatnantsxkayqhgrjhpxzfcaazwwwgqrltontihjxjxitdcbqtwtyfqjgwcbqtwtyfqwzfufzslunluwzkaiyxzjnudxzlnnfckgdlslsimlqwkfklmlsruczggqw')
+
+key_length =
+
+    12
+
+plaintext =
+
+fourscoreandsevenyearsagoourfathersbroughtforthonthiscontinentanewnationconceivedinlibertyanddedicatedtothepropositionthatallmenarecreatedequalnowweareengagedinagreatcivilwartestingwhetherthatnationoranynationsoconceivedandsodedicatedcanlongendurewearemetonagreatbattlefieldofthatwarwehavecometodedicateaportionofthatfieldasafinalrestingplaceforthosewhoheregavetheirlivesthatthatnationmightliveitisaltogetherfittingandproperthatweshoulddothisbutinalargersensewecannotdedicatewecannotconsecratewecannothallowthisgroundthebravemenlivinganddeadwhostruggledherehaveconsecrateditfaraboveourpoorpowertoaddordetracttheworldwilllittlenotenorlongrememberwhatwesayherebutitcanneverforgetwhattheydidhereitisforusthelivingrathertobededicatedheretotheunfinishedworkwhichtheywhofoughtherehavethusfarsonoblyadvanceditisratherforustobeherededicatedtothegreattaskremainingbeforeusthatfromthesehonoreddeadwetakeincreaseddevotiontothatcauseforwhichtheygavethelastfullmeasureofdevotionthatweherehighlyresolvethatthesedeadshallnothavediedinvainthatthisnationundergodshallhaveanewbirthoffreedomandthatgovernmentofthepeoplebythepeopleforthepeopleshallnotperishfromtheearthgettysburghaddressabrahamlincoln
+
+ans =
+
+    12     4    18     5     9    20    12     4    18     5     9    20
+
+
+
+decrypt_vigenere('vmhklngnfgrdcuuxxklvrnyktabrkywxynoulrekvtfxkxzwaanqzhnzcnuphtzqmhtcztcsgpoztumhzloyvmhklnngpqhdnohykxzoutjvtyzintvxkrovmdpvmjumhvhimgyzahoyjjfttzlqwwalmkufvbniupykxdvrngxmzckyfqmzoudjvnyzgpibhbftqbvhtzzkrhldjxfxktczzytpxhioplvbuongyuxlwevmhuyjumykxyzycxrgnwotizavnoplvlvhkvnpxzvrntihbmzjtxzooycwhfpnmkahgacktjvtmzknnqzpbkvbkxudrqtnmvongbhlavtfrblwdxkylljmeksjyvmrgfybuboprbmojaimwlpcgxjvxlixksjlvayotnxacxqzjaackvwhxzvtfykxcjoejvhmonqxhpojyvfqwsjumnqzhijkyvpodyrjuxkoncyvhviohbhtsgicqomozzwshmoztvmhipkktblesgkcixlajxgfvhuvtffqxdygablesygysihyonqxhpojyvfqwsjtifqwackhtuxzockqoxjcuynwasvaimwxyvtfnwfhfkurhpvijgwlyacktjvtipyvqhbutuwwkxkbkttzwvizdjdehmsgiqhddzuoxlavyrwlgnxrgfqyvmzjjptflagjqrlnzjjuxhmkvbrihonudrnjvtiteripzkswalguplunuongwhlzoonqwbtzzqhktubkvmhkvvjatxkljtatxkozgfnvabhsksjtuyovbrgabudjftbnkatxwvizmsrpackrnsxynicqobubeqzwhqjopmlfkzgtqdwfxgpybhbckcwwalropieevrgpigbktuwpqhdtuwwvmhdxyfbepzyqswalrnkxsxydtiblgkvtffvplropirgkjcpykxyjgftxkzcgftzlavrnjumovtqzulvpruykxyzccqnlhggfdzxhgrmsrpdcuumlglncjnwxsdmjydgkrgpyvmvnnqbkhdzbgwbmodtixwbsgzwwqlajmqqgtuyohdrnsdyvjqolmejfuwackvzqxddrnhrflouatxtagguyzalignqdkljtgfqwvikkxdesoudjdkvxqcsggvozqwresnzcnuphtzqmhtcztnjgslkvgqlg')
+
+key_length =
+
+     7
+
+plaintext =
+
+theresaladywhossureallthatglittersisgoldandshesbuyingastairwaytoheavenandwhenshegetstheresheknowsifthestoresareclosedwithawordshecangetwhatshecamefortheresasignonthewallbutshewantstobesureandyouknowsometimeswordshavetwomeaningsinthetreebythebrooktheresasongbirdwhosingssometimesallofourthoughtsaremisgiventheresafeelingigetwhenilooktothewestandmyspiritiscryingforleavinginmythoughtsihaveseenringsofsmokethroughthetreesandthevoicesofthosewhostandlookinganditswhisperedthatsoonifweallcallthetunethenthepiperwillleadustoreasonandanewdaywilldawnforthosewhostandlongandtheforestwillechowithlaughteranditmakesmewonderiftheresabustleinyourhedgerowdontbealarmednowitsjustaspringcleanforthemayqueenyestherearetwopathsyoucangobybutinthelongruntheresstilltimetochangetheroadyoureonyourheadishumminganditwontgobecauseyoudontknowthepiperscallingyoutojoinhimdearladycantyouhearthewindblowanddidyouknowyourstairwayliesonthewhisperingwindandaswewindondowntheroadourshadowstallerthanoursoulstherewalksaladyweallknowwhoshineswhitelightandwantstoshowhoweverythingstillturnstogoldandifyoulistenveryhardthetunewillcometoyouatlastwhenallareoneandoneisalltobearockandnottorollstairwaytoheavenledzeppelin
+
+ans =
+
+     2     5     3    19     7    21     6
+
+
+
+
+decrypt_vigenere('jddiiuysoynddkwxlvbpwxfwechikltnbhlddkjyteblldakuddrldbspytvodhhlwxleeyrwvyuzddkwxlpethhhwxzrkajhheuihmhuuakuqdrihhdrsrpozrdakuqdmzwxhwrpwuakujoqdvjodjjdjjkrlzqyhjohzbezberputhqtzkkuwxlihbpyvxiiddkhhzqqafxohjvraolicrhwdbzzeygyukqugbvqwalclwxlpquaethvvhxlvebjxaveyhiahtohrfwxlwktwktwhlhqugiarekdmolblldakebjxaddkdipqkmiyzkjorknkjohiarekwxlmqieuyzejnmpwxlbuzrvmoqthshpudkymibpqwakhvxwowxlwksjufzevgqugrburshthvyafqtheuhjdreuhjdrqugjouebjxhqtakhvxwowxlyeysqsebhgudhdavdpfaluiudsrkushvaljkhqkddkzyakyavxldtohmlqjndbbpfoldneqjnqugxhvjorkzoqpqjohzherlumvfajrclwetbqypitbrldcpvxirovihhezvxikdojdbsreofqsoqfkujkeywblgyukyzmefoudlijdhyrbqdrihhdrsrb')
+
+key_length =
+
+    15
+
+plaintext =
+
+twasbrilligandtheslithytovesdidgyreandgimbleinthewabeallmimsyweretheborogovesandthemomerathsoutgrabebewarethejabberwockmysonthejawsthatbitetheclawsthatcatchbewarethejubjubbirdandshunthefrumiousbandersnatchhetookhisvorpalswordinhandlongtimethemanxomefoehesoughtsorestedhebythetumtumtreeandstoodawhileinthoughtandasinuffishthoughthestoodthejabberwockwitheyesofflamecamewhifflingthroughthetulgeywoodandburbledasitcameonetwoonetwoandthroughandthroughthevorpalbladewentsnickersnackheleftitdeadandwithitsheadhewentgalumphingbackandhasthouslainthejabberwockcometomyarmsmybeamishboyofrabjousdaycalloohcallayhechortledinhisjoylewiscarroljabberwocky
+
+ans =
+
+  Columns 1 through 12
+
+    16     7     3    16     7     3    16     7     3    16     7     3
+
+  Columns 13 through 15
+
+    16     7     3
+
+
+
+
+decrypt_vigenere('ohqdiaoampaasbmetyhtpsaxjxqegakzfnuovvpxkkywinytxxmakxwfyvmpqaauzehlonkxtzmtaapacwiqpnogjfhnjizogzfyhhodakagtfjnkiahjhadjnllrddihoptnlrandshjzjermdyrxhusaavvizpezvcsvwpichkzutgacvxkbvlvpkundvoczlxpfgqljjaehvsdrclowzkuqqxgqlnhdvlkysunsdydvagcxbalhagmlpnqznkdypratpsgvliplnvjpsynkawhzlpzmtqajppqlcyggqlmowuahzmebrdagyppldylyvowkkffjvwnonpoukyybwacahrpevonclmodgrgosecpaerohndfbfhizdtsansajkdwcgsntkbwmjnheajhzbcvmaztlgwatjtzjiyjcwdrmpowcusaxhvlzzhxyhdplupvznvrvhlmfcydwlnvolvrraykltaqezrkvopdsvhezrcyvecouicmaduyagnltzoayvragiycdzrmhnaruufeazndzzckzflqpjyjhtsvpeayuloypxsgdgsoyvjrkdjzonbavgttiaswyrjjlikyvzsznkdyprjntfvlpijtgydjkrbametxlcyvfqvrasawcelunzowgzskywjracwugjgdgoabdotjajllfqlgkdqlfwaxnhwkmkydcsinstozolfeggqwgwrkrkwvbfzkaglvtxsalloddanjxslqhqaqklppnrwajqvnlttfzxuywnyatlaarubnjtzjponbnjecmzqqsfcacwinltxgznuoqblptdlfysvutjogckxrzvjszogydnduxdtjogclhvigecmajcghpoodtgptmqgqloebkzjpdnwkzzauvmtftkhxglgyflfqkhictjaqlkgxwzrtxfdzvlxuodtnpnwxrjyzzinlyzjfchghxxlopeonydoqkppraavfoqrqhpoxyhpiczosfzoenjvhakkcyvyxvfecmicnchyhopwkncewvsbnplkuvznrapiygkkkmdlovmwarajphnruxwjylfmqfxtpywxvnwaaphiziatdwaaphwnjozgozvydvozosfzofvvnphkcgcwvwqpnngufumfchwkjzajplvvlndtmvvtfgxbxdloajldycozkinltmsgclmasvhtekbooznqukatfnqvnlxzhntfgdydjdrfoaaplovieovpaapjijoixlgeonbhodtxigokvmlnpgklvhzbtujshgajtftxyosdgiqflpahndtyocotrnuodtxvnpebmlgbdxrkwvbfzxwgkltlfqbozoduudpunvlvjxtzrtjncpjjpydgwdgqltpprrgolunuxnxkkvswablopakkfzoajuyxtmhpadbcadjvgygemewajpwkznzhrbacaexvvpyrupfaszogadnwzjijiovssgcbzosgfozjarubswosgezrqvnlxzhndlnomrkgqlfzfunyyehioccyryhkagyrkwvbfzgeevlfzfunyxhdzogdyncozntjogctnpzvjsshfpsoalvguuykelunfgauztgldbwlakggujzmejuywwgshlfqrdvoxthjfjehajctzicncnwkonpouuswfjpyeqgygwqzjkzeiubvzxgqlmkdsdjpffxtzkckycymchlghtjuqyglxbhqhzdctlunyzwcjwweerkhxgxtajpjbxtfeajvydsvmipibkydflfqlyestajlnrcvrwxztwnzyxubaggkcjgsalnpxtzgdlerlmaekyufsqnkcagzvolcrxuzbxthnajrahxaixhkyaapypjlkkppkqjfhkgtpprhnrurwhyvoplurubelgzizfajavgttvollgnyrdpzrkwvbfzvesoaylkwdzowbgavpjbopainhvfjubdsylwezknsyufreinzvlfqcozbdxjgdgscozoeklfmmgjzndthhtcwynkjqiumvswodtkuluvfwsamgjjtgiqflgfvodxxkuzxgqlrwnjvyylunodhaguftfgxacaauuiqaajsnhdvlvsafcphauuympwcbzcagkhntrrmacaegppdzrqhypdjlcwovcodplgzpegaufkdnypeldnhlvnpmvmtdqxdrwhuugzxnqhizuasqqlbyzfetxzysggxsykulpetsybacahguutunapjydayuponbajkquykyysxyodtusaxhvlzodjyjjldynubaszoqdwbomdyxgsummyukjvtjajpubdynaiutcvwornbagpboakfupxgtxwnllrjbnwcjzvpwcnygwcjpprrbwln')
+
+key_length =
+
+    11
+
+plaintext =
+
+byjimlitkeinjuriesareanoccupationalhazardineverybigtimesportbutsomuchsoinskiingthatkildowwasnttheonlyathleteinwednesdaysracewhocamebackfromahorrificcrashinmondaystrainingsessiontocompeteshewasnteventheonlyathletetakenofftheslopeinahelicopterforemergencymedicaltreatmentwhohealedfastenoughtotakeanothershotfourskiersinallcrashedduringtrainingontheslickwatersoakedartificialsnowandonlycanadianallisonforsythwhotorekneeligamentscalleditanolympicselisabethgoerglofaustriawhomadeitdowntothebottomofthetrainingrununderherownpowercrashedasecondtimewednesdaycarolemontilletcarlesoffrancewhowastakenbyhelicoptertoamedicalclinicinnearbysestriereandshowedupatthestartlinewithafacesobruisedthatshelookedlikeaboxerbravelyskiedtothplacekildowsperformancethoughmayhavebeeneventougherinmondaystrainingrunshewasgoingsofastthathermomentumfirstsplayedherskisandthenlaunchedhertumblingthroughtheairbythetimeshelandedlookingbackwardandbangedtoastopeverybodyonthehillfearedtheworstallirememberisbeinginmytuckandflyingkildowrecalledandlookingbackupatthegateijustwentoverincrediblyforallthepaincausedbysomuchrollingandtumblingabruisedhipwaskildowsmostsevereinjuryandjustaboutthetimeshegotintouchwithalltheotherbatteredpartsofherbodyinahospitalinturinolympicchampionpicabostreetwasatherbedsidestreetwhoknowsathingortwoaboutcrasheshadbeentherolemodelforkildowscareerandshesoonbecameaninspirationaswelltheytalkedthencriedthensettleddownandbeganplottingareturntotheslopestheprotegelikedtheplansomuchthattuesdaymorningwhilethehospitalstaffworkedonherdischargepaperskildowslippedonherclothesgatheredherbagsandmadeabreakforittheyleftmealoneforanhourandahalfandiwasinahurrytogetbackandtrainshesaidibarelymadeitoutoftheroomwhensomeoneranupyellednonoyoumustwaithereandputmebackintheroomkildowsaidbummerbutshedidnthavetowaitmuchlongeradayofrestinsestrierepersuadedhertomakeonefinalpreracetrainingrunwednesdaymorningpainwassomethingiwasgonnatakenomatterwhatkildowsaiditwasjustamatterofifmybodycouldphysicallywithstandtheforcesofthespeedbutasshebarreledoutofthebumpywoodlandzoneabouttwothirdsofthewaydownthehillandintothelongfinalslopethistimeforkeepssherealizedthepainshehadtodealwithitwasntonlyphysicalayearagokildowwasoneofahandfuloftopskierswhotoldofficialsthesansicariocoursewastooboringfortheolympicsthuschallengedthoseofficialsbulldozedthecoursetomakebiggerjumpsslickerplateausandsteeperlandingzones
+
+ans =
+
+    13     9     7    21    22    15     6     7     2    11    18
+
+diary off
