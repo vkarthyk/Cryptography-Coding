@@ -1,0 +1,31 @@
+fast_exponentiation(17, 5, 2631)
+
+ans =
+
+    10
+
+fast_exponentiation(13, 7, 256)
+
+ans =
+
+     9
+
+fast_exponentiation(19, 5, 117)
+
+ans =
+
+     1
+
+rsa
+
+m =
+
+      834300
+
+rabin
+
+ans =
+
+     1443540     1443540     1443540     1443540
+
+diary off

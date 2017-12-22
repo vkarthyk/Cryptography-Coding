@@ -8,7 +8,7 @@ for i=1:trials
     
     for j=1:swaps
 
-        new_key = swap(key, 1, 26);
+        new_key = swap(key, 5, 26);
     
         new_score = score(new_key, ciphertext);
 

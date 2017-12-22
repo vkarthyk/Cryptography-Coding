@@ -23,7 +23,7 @@ for ind = index'
 end
 key;
 
-key = search(ciphertext, key, 5, 5000);
+key = search(ciphertext, key, 5, 2000);
 
 plaintext = substitute(key, ciphertext);
 

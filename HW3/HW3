@@ -1,0 +1,108 @@
+Question 1:
+[gcd, X, Y] = extendedEuclideanAlgo(2501, 1002)
+
+gcd =
+
+     1
+
+
+X =
+
+   125
+
+
+Y =
+
+  -312
+
+[gcd, X, Y] = extendedEuclideanAlgo(19, 7)
+
+gcd =
+
+     1
+
+
+X =
+
+     3
+
+
+Y =
+
+    -8
+
+[gcd, X, Y] = extendedEuclideanAlgo(114, 76)
+
+gcd =
+
+    38
+
+
+X =
+
+     1
+
+
+Y =
+
+    -1
+
+
+Question 2:
+
+x = inversemodn(3, 26)
+
+x =
+
+     9
+
+x = inversemodn(5, 26)
+
+x =
+
+    21
+
+x = inversemodn(7, 26)
+
+x =
+
+    15
+
+
+
+
+HW_6_a)
+
+for x=1:61
+    p(x) = 8*power(x,2) - 488*(x) + 7243
+end
+
+isprime(abs(p))
+
+ans =
+
+  Columns 1 through 25
+
+   1   1   1   1   1   1   1   1   1   1   1   1   1   1   1   1   1   1   1   1   1   1   1   1   1
+
+  Columns 26 through 50
+
+   1   1   1   1   1   1   1   1   1   1   1   1   1   1   1   1   1   1   1   1   1   1   1   1   1
+
+  Columns 51 through 61
+
+   1   1   1   1   1   1   1   1   1   1   1
+
+
+HW_6_b)
+
+for y=1:19
+    q(y) = power(y,4)+ 29*power(y,2) + 101;
+end
+isprime(q)
+
+ans =
+
+   1   1   1   1   1   1   1   1   1   1   1   1   1   1   1   1   1   1   1
+
+diary off
